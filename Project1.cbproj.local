@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.073,=D:\проект\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.726,C:\Users\lapo\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.h=C:\Angel2020\lyceum\CPP2015\11 klass\CBuilder\animat\2021\voyage\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.726,C:\Users\lapo\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.dfm=C:\Angel2020\lyceum\CPP2015\11 klass\CBuilder\animat\2021\voyage\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.163,D:\проект\Unit3.cpp=D:\проект\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.095,C:\Users\lapo\OneDrive\Документы\Embarcadero\Studio\Projects\Project1.cbproj=C:\Angel2020\lyceum\CPP2015\11 klass\CBuilder\animat\2021\voyage\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.163,D:\проект\Unit3.dfm=D:\проект\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.891,=E:\проект\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.118,=C:\Users\lapo\OneDrive\Документы\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.606,=C:\Users\lapo\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.936,=E:\проект\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.865,E:\проект\Unit2.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.726,C:\Users\lapo\OneDrive\Документы\Embarcadero\Studio\Projects\Unit1.cpp=C:\Angel2020\lyceum\CPP2015\11 klass\CBuilder\animat\2021\voyage\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.254,C:\Users\lapo\OneDrive\Документы\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Angel2020\lyceum\CPP2015\11 klass\CBuilder\animat\2021\voyage\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.163,D:\проект\Unit3.h=D:\проект\Unit2.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.975,=D:\проект\Unit2.cpp</Transaction>
+  </Transactions>
+</BorlandProject>

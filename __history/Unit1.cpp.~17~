@@ -1,0 +1,326 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit3.h"
+#include "Unit1.h"
+#include "Unit2.h"
+#include "cmath"
+#include <mmsystem.h>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+Graphics::TBitmap  *kadr = new Graphics::TBitmap(),
+					*kadr2 = new Graphics::TBitmap(),
+				   *fon = new Graphics::TBitmap(),
+				   *fon_kadr1 = new Graphics::TBitmap(),
+				   *fon_kadr2 = new Graphics::TBitmap(),
+				   *fon_kadr3 = new Graphics::TBitmap(),
+				   *fon_kadr4 = new Graphics::TBitmap(),
+				   *fon_kadr5 = new Graphics::TBitmap(),
+				   *fon_kadr6 = new Graphics::TBitmap(),
+				   *fon_kadr7 = new Graphics::TBitmap(),
+				   *fon_kadr8 = new Graphics::TBitmap(),
+				   *fon_kadr9 = new Graphics::TBitmap(),
+				   *fon_kadr10 = new Graphics::TBitmap(),
+				   *fon_kadr11 = new Graphics::TBitmap(),
+				   *fon_kadr12 = new Graphics::TBitmap(),
+				   *fon_kadr13 = new Graphics::TBitmap(),
+				   *fon_kadr14 = new Graphics::TBitmap(),
+				   *fon_kadr15 = new Graphics::TBitmap(),
+				   *fon_kadr16 = new Graphics::TBitmap(),
+				   *fon_kadr17= new Graphics::TBitmap(),
+				   *fon_kadr18 = new Graphics::TBitmap(),
+				   *fon_kadr19 = new Graphics::TBitmap(),
+				   *fon_kadr20 = new Graphics::TBitmap(),
+				   *fon_kadr21 = new Graphics::TBitmap(),
+				   *fon_kadr22 = new Graphics::TBitmap(),
+				   *fon_kadr23 = new Graphics::TBitmap(),
+				   *fon_kadr24 = new Graphics::TBitmap(),
+				   *fon_kadr25 = new Graphics::TBitmap(),
+				   *fon_kadr26 = new Graphics::TBitmap(),
+				   *fon_kadr27 = new Graphics::TBitmap(),
+				   *fon_kadr28 = new Graphics::TBitmap(),
+				   *fon_kadr29 = new Graphics::TBitmap(),
+				   *fon_kadr30 = new Graphics::TBitmap(),
+				   *fon_kadr31 = new Graphics::TBitmap(),
+				   *fon_kadr32 = new Graphics::TBitmap(),
+				   *fon_kadr33 = new Graphics::TBitmap(),
+				   *fon_kadr34 = new Graphics::TBitmap(),
+				   *fon_kadr35 = new Graphics::TBitmap(),
+				   *fon_kadr36 = new Graphics::TBitmap(),
+				   *fon_kadr37 = new Graphics::TBitmap(),
+				   *fon_kadr38 = new Graphics::TBitmap(),
+				   *fon_kadr39 = new Graphics::TBitmap(),
+				   *fon_kadr40 = new Graphics::TBitmap(),
+				   *fon_kadr41 = new Graphics::TBitmap(),
+				   *fon_kadr42 = new Graphics::TBitmap(),
+				   *fon_kadr43 = new Graphics::TBitmap(),
+				   *fon_kadr44 = new Graphics::TBitmap(),
+				   *fon_kadr45 = new Graphics::TBitmap(),
+				   *fon_kadr46 = new Graphics::TBitmap(),
+				   *fon_kadr47 = new Graphics::TBitmap(),
+				   *fon_kadr48 = new Graphics::TBitmap(),
+				   *fon_kadr49 = new Graphics::TBitmap(),
+				   *fon_kadr50 = new Graphics::TBitmap(),
+				   *fon_kadr51 = new Graphics::TBitmap(),
+				   *fon_kadr52 = new Graphics::TBitmap(),
+				   *fon_kadr53 = new Graphics::TBitmap(),
+				   *fon_kadr54 = new Graphics::TBitmap(),
+				   *fon_kadr55 = new Graphics::TBitmap(),
+				   *fon_kadr56 = new Graphics::TBitmap(),
+				   *fon_kadr57 = new Graphics::TBitmap(),
+				   *fon_kadr58 = new Graphics::TBitmap(),
+				   *fon_kadr59 = new Graphics::TBitmap(),
+				   *fon_kadr60 = new Graphics::TBitmap(),
+				   *fon_kadr61 = new Graphics::TBitmap(),
+				   *fon_kadr62 = new Graphics::TBitmap(),
+				   *fon_kadr63 = new Graphics::TBitmap(),
+				   *fon_kadr64 = new Graphics::TBitmap(),
+				   *fon_kadr65 = new Graphics::TBitmap(),
+				   *fon_kadr66 = new Graphics::TBitmap(),
+				   *fon_kadr67 = new Graphics::TBitmap(),
+				   *fon_kadr68 = new Graphics::TBitmap(),
+				   *fon_kadr69 = new Graphics::TBitmap(),
+				   *fon_kadr70 = new Graphics::TBitmap(),
+				   *fon_kadr71 = new Graphics::TBitmap(),
+				   *fon_kadr72 = new Graphics::TBitmap(),
+				   *fon_kadr73 = new Graphics::TBitmap(),
+				   *fon_kadr74 = new Graphics::TBitmap(),
+				   *fon_kadr75 = new Graphics::TBitmap(),
+				   *fon_kadr76 = new Graphics::TBitmap(),
+				   *fon_kadr77 = new Graphics::TBitmap(),
+				   *fon_kadr78 = new Graphics::TBitmap(),
+				   *fon_kadr79 = new Graphics::TBitmap(),
+				   *fon_kadr80 = new Graphics::TBitmap(),
+				   *fon_kadr81 = new Graphics::TBitmap(),
+				   *fon_kadr82 = new Graphics::TBitmap(),
+				   *fon_kadr83 = new Graphics::TBitmap(),
+				   *fon_kadr84 = new Graphics::TBitmap(),
+				   *fon_kadr85 = new Graphics::TBitmap(),
+				   *fon_kadr86 = new Graphics::TBitmap(),
+				   *fon_kadr87 = new Graphics::TBitmap(),
+				   *fon_kadr88 = new Graphics::TBitmap(),
+				   *fon_kadr89 = new Graphics::TBitmap(),
+				   *fon_kadr90 = new Graphics::TBitmap(),
+				   *fon_kadr91 = new Graphics::TBitmap(),
+				   *fon_kadr92 = new Graphics::TBitmap(),
+				   *fon_kadr93 = new Graphics::TBitmap(),
+				   *fon_kadr94 = new Graphics::TBitmap(),
+				   *fon_kadr95 = new Graphics::TBitmap(),
+				   *fon_kadr96 = new Graphics::TBitmap(),
+				   *fon_kadr97 = new Graphics::TBitmap(),
+				   *fon_kadr98 = new Graphics::TBitmap(),
+				   *fon_kadr99 = new Graphics::TBitmap(),
+				   *fon_kadr100 = new Graphics::TBitmap(),
+				   *fon_kadr101 = new Graphics::TBitmap(),
+				   *fon_kadr102 = new Graphics::TBitmap(),
+				   *fon_kadr103 = new Graphics::TBitmap(),
+				   *fon_kadr104 = new Graphics::TBitmap(),
+				   *fon_kadr105 = new Graphics::TBitmap(),
+				   *fon_kadr106 = new Graphics::TBitmap(),
+				   *fon_kadr107 = new Graphics::TBitmap(),
+				   *fon_kadr108 = new Graphics::TBitmap(),
+				   *fon_kadr109 = new Graphics::TBitmap(),
+				   *fon_kadr110 = new Graphics::TBitmap(),
+				   *fon_kadr111 = new Graphics::TBitmap(),
+				   *fon_kadr112 = new Graphics::TBitmap(),
+				   *fon_kadr113 = new Graphics::TBitmap(),
+				   *fon_kadr114 = new Graphics::TBitmap(),
+				   *fon_kadr115 = new Graphics::TBitmap(),
+				   *fon_kadr116 = new Graphics::TBitmap(),
+				   *fon_kadr117 = new Graphics::TBitmap(),
+				   *fon_kadr118 = new Graphics::TBitmap(),
+				   *fon_kadr119 = new Graphics::TBitmap(),
+				   *fon_kadr120 = new Graphics::TBitmap(),
+				   *fon_kadr121 = new Graphics::TBitmap(),
+				   *fon_kadr122 = new Graphics::TBitmap(),
+				   *fon_kadr123 = new Graphics::TBitmap(),
+				   *fon_kadr124 = new Graphics::TBitmap(),
+				   *fon_kadr125 = new Graphics::TBitmap(),
+				   *fon_kadr126 = new Graphics::TBitmap(),
+				   *fon_kadr127 = new Graphics::TBitmap(),
+				   *fon_kadr128 = new Graphics::TBitmap(),
+				   *fon_kadr129 = new Graphics::TBitmap(),
+				   *fon_kadr130 = new Graphics::TBitmap(),
+				   *fon_kadr131 = new Graphics::TBitmap(),
+				   *fon_kadr132 = new Graphics::TBitmap(),
+				   *fon_kadr133 = new Graphics::TBitmap(),
+				   *fon_kadr134 = new Graphics::TBitmap(),
+				   *fon_kadr135 = new Graphics::TBitmap(),
+				   *fon_kadr136 = new Graphics::TBitmap(),
+				   *fon_kadr137 = new Graphics::TBitmap(),
+				   *fon_kadr138 = new Graphics::TBitmap(),
+				   *fon_kadr139 = new Graphics::TBitmap(),
+				   *fon_kadr140 = new Graphics::TBitmap(),
+				   *fon_kadr141 = new Graphics::TBitmap(),
+				   *fon_kadr142 = new Graphics::TBitmap(),
+				   *fon_kadr143 = new Graphics::TBitmap(),
+				   *fon_kadr144 = new Graphics::TBitmap(),
+				   *fon_kadr145 = new Graphics::TBitmap(),
+				   *fon_kadr146 = new Graphics::TBitmap(),
+				   *fon_kadr147 = new Graphics::TBitmap(),
+				   *fon_kadr148 = new Graphics::TBitmap(),
+				   *fon_kadr149 = new Graphics::TBitmap(),
+				   *fon_kadr150 = new Graphics::TBitmap(),
+				   *fon_kadr151 = new Graphics::TBitmap();
+double w, h,x_line1 = 150,y_line1=-150;
+double v0;
+bool kost = true;
+double u;
+double i = 0;
+int k1 = 81;
+int k2 = 87;
+int k3 = 69;
+int k4 = 82;
+int y = 0;
+bool line1=false;
+extern int theme;
+extern int key;
+extern int mode;
+double t=0;
+double k=0;
+TRect pr_kadr, pr_fon1,pr_fon2,pr_fon3,pr_fon4,pr_fon5,pr_fon6,pr_fon7,pr_fon8,pr_fon9,
+pr_fon10,pr_fon11,pr_fon12,pr_fon13,pr_fon14,pr_fon15,pr_fon16,pr_fon17,pr_fon18,pr_fon19,
+pr_fon20,pr_fon21,pr_fon22,pr_fon23,pr_fon24,pr_fon25,pr_fon26,pr_fon27,pr_fon28,pr_fon29,
+pr_fon30,pr_fon31,pr_fon32,pr_fon33,pr_fon34,pr_fon35,pr_fon36,pr_fon37,pr_fon38,pr_fon39,
+pr_fon40,pr_fon41,pr_fon42,pr_fon43,pr_fon44,pr_fon45,pr_fon46,pr_fon47,pr_fon48,pr_fon49,
+pr_fon50,pr_fon51,pr_fon52,pr_fon53,pr_fon54,pr_fon55,pr_fon56,pr_fon57,pr_fon58,pr_fon59,
+pr_fon60,pr_fon61,pr_fon62,pr_fon63,pr_fon64,pr_fon65,pr_fon66,pr_fon67,pr_fon68,pr_fon69,
+pr_fon70,pr_fon71,pr_fon72,pr_fon73,pr_fon74,pr_fon75,pr_fon76,pr_fon77,pr_fon78,pr_fon79,
+pr_fon80,pr_fon81,pr_fon82,pr_fon83,pr_fon84,pr_fon85,pr_fon86,pr_fon87,pr_fon88,pr_fon89,
+pr_fon90,pr_fon91,pr_fon92,pr_fon93,pr_fon94,pr_fon95,pr_fon96,pr_fon97,pr_fon98,pr_fon99,
+pr_fon100,pr_fon101,pr_fon102,pr_fon103,pr_fon104,pr_fon105,pr_fon106,pr_fon107,pr_fon108,pr_fon109,
+pr_fon110,pr_fon111,pr_fon112,pr_fon113,pr_fon114,pr_fon115,pr_fon116,pr_fon117,pr_fon118,pr_fon119,
+pr_fon120,pr_fon121,pr_fon122,pr_fon123,pr_fon124,pr_fon125,pr_fon126,pr_fon127,pr_fon128,pr_fon129,
+pr_fon130,pr_fon131,pr_fon132,pr_fon133,pr_fon134,pr_fon135,pr_fon136,pr_fon137,pr_fon138,pr_fon139,
+pr_fon140,pr_fon141,pr_fon142,pr_fon143,pr_fon144,pr_fon145,pr_fon146,pr_fon147,pr_fon148,pr_fon149,
+pr_fon150,pr_fon151;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Timer1Timer(TObject *Sender)
+{
+	y++;
+	Image1 -> Canvas -> Draw (x_line1, y_line1, fon_kadr1);
+	y_line1 += 7.6;
+	Label1 -> Caption = y;
+	if (line1 == true)
+	{
+		pr_fon1 = Bounds(x_line1, y_line1, w, h);
+		fon_kadr1 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon1);
+		Image1 -> Canvas -> Draw(x_line1, y_line1, kadr2);
+	}
+	else
+	{
+	 pr_fon1 = Bounds(x_line1, y_line1, w, h);
+	 fon_kadr1 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon1);
+	 Image1 -> Canvas -> Draw(x_line1, y_line1, kadr);
+	}
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::FormKeyDown(TObject *Sender, WORD &Key, TShiftState Shift)
+
+{
+	if(y_line1 >=500 && y_line1 <= 900 && Key == k2)
+		line1 = true;
+}
+//---------------------------------------------------------------------------
+
+
+
+
+void __fastcall TForm1::SpeedButton3Click(TObject *Sender)
+{
+	Timer1->Enabled = false;
+	Form2->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::SpeedButton2Click(TObject *Sender)
+{
+   Timer1->Enabled = false;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::SpeedButton1Click(TObject *Sender)
+{
+	PlaySoundA("D:\\sound.wav",NULL,SND_ASYNC);
+
+	if (key == 1)
+	{
+		 k1 = 81;
+		 k2 = 87;
+		k3 = 69;
+		k4 = 82;
+	}
+	if (key == 2)
+	{
+		 k1 = 49;
+		 k2 = 50;
+		k3 = 51;
+		k4 = 52;
+	}
+	if (key == 3)
+	{
+		 k1 = 65;
+		 k2 = 83;
+		k3 = 68;
+		k4 = 70;
+	}
+	SpeedButton2 -> Visible = true;
+	SpeedButton3 -> Visible = true;
+	SpeedButton4 -> Visible = true;
+   Timer1->Enabled = true;
+	if (theme == 1)
+	{
+		fon -> LoadFromFile("pole2.bmp");
+	}
+	if (theme == 2)
+	{
+		fon -> LoadFromFile("pole1.bmp");
+	}
+	if (theme == 3)
+	{
+		fon -> LoadFromFile("pole3.bmp");
+	}
+	Image1 -> Picture -> Assign(fon);
+	if (theme == 1)
+	{
+		kadr -> LoadFromFile("kletka.bmp");
+		kadr2 -> LoadFromFile("kletka2.bmp");
+	}
+	if (theme == 2)
+	{
+		kadr -> LoadFromFile("kletka.bmp");
+		kadr2 -> LoadFromFile("kletka2.bmp");
+	}
+	if (theme == 3)
+	{
+		kadr -> LoadFromFile("kletka3.bmp");
+		kadr2 -> LoadFromFile("kletka4.bmp");
+	}
+   w = kadr -> Width;
+   h = kadr -> Height;
+   fon_kadr1 -> Width = w;
+   fon_kadr1 -> Height = h;
+   pr_kadr = Bounds(0, 0, w, h);
+   pr_fon1 = Bounds(x_line1, y_line1, w, h);
+   fon_kadr1 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon1);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::SpeedButton4Click(TObject *Sender)
+{
+	Timer1->Enabled = false;
+
+}
+//---------------------------------------------------------------------------
+

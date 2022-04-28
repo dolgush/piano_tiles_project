@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1642707941 source:d:\проект final\igra\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+

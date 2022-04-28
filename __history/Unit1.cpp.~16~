@@ -1,0 +1,3463 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit3.h"
+#include "Unit1.h"
+#include "Unit2.h"
+#include "cmath"
+#include <mmsystem.h>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+Graphics::TBitmap  *kadr = new Graphics::TBitmap(),
+					*kadr2 = new Graphics::TBitmap(),
+				   *fon = new Graphics::TBitmap(),
+				   *fon_kadr1 = new Graphics::TBitmap(),
+				   *fon_kadr2 = new Graphics::TBitmap(),
+				   *fon_kadr3 = new Graphics::TBitmap(),
+				   *fon_kadr4 = new Graphics::TBitmap(),
+				   *fon_kadr5 = new Graphics::TBitmap(),
+				   *fon_kadr6 = new Graphics::TBitmap(),
+				   *fon_kadr7 = new Graphics::TBitmap(),
+				   *fon_kadr8 = new Graphics::TBitmap(),
+				   *fon_kadr9 = new Graphics::TBitmap(),
+				   *fon_kadr10 = new Graphics::TBitmap(),
+				   *fon_kadr11 = new Graphics::TBitmap(),
+				   *fon_kadr12 = new Graphics::TBitmap(),
+				   *fon_kadr13 = new Graphics::TBitmap(),
+				   *fon_kadr14 = new Graphics::TBitmap(),
+				   *fon_kadr15 = new Graphics::TBitmap(),
+				   *fon_kadr16 = new Graphics::TBitmap(),
+				   *fon_kadr17= new Graphics::TBitmap(),
+				   *fon_kadr18 = new Graphics::TBitmap(),
+				   *fon_kadr19 = new Graphics::TBitmap(),
+				   *fon_kadr20 = new Graphics::TBitmap(),
+				   *fon_kadr21 = new Graphics::TBitmap(),
+				   *fon_kadr22 = new Graphics::TBitmap(),
+				   *fon_kadr23 = new Graphics::TBitmap(),
+				   *fon_kadr24 = new Graphics::TBitmap(),
+				   *fon_kadr25 = new Graphics::TBitmap(),
+				   *fon_kadr26 = new Graphics::TBitmap(),
+				   *fon_kadr27 = new Graphics::TBitmap(),
+				   *fon_kadr28 = new Graphics::TBitmap(),
+				   *fon_kadr29 = new Graphics::TBitmap(),
+				   *fon_kadr30 = new Graphics::TBitmap(),
+				   *fon_kadr31 = new Graphics::TBitmap(),
+				   *fon_kadr32 = new Graphics::TBitmap(),
+				   *fon_kadr33 = new Graphics::TBitmap(),
+				   *fon_kadr34 = new Graphics::TBitmap(),
+				   *fon_kadr35 = new Graphics::TBitmap(),
+				   *fon_kadr36 = new Graphics::TBitmap(),
+				   *fon_kadr37 = new Graphics::TBitmap(),
+				   *fon_kadr38 = new Graphics::TBitmap(),
+				   *fon_kadr39 = new Graphics::TBitmap(),
+				   *fon_kadr40 = new Graphics::TBitmap(),
+				   *fon_kadr41 = new Graphics::TBitmap(),
+				   *fon_kadr42 = new Graphics::TBitmap(),
+				   *fon_kadr43 = new Graphics::TBitmap(),
+				   *fon_kadr44 = new Graphics::TBitmap(),
+				   *fon_kadr45 = new Graphics::TBitmap(),
+				   *fon_kadr46 = new Graphics::TBitmap(),
+				   *fon_kadr47 = new Graphics::TBitmap(),
+				   *fon_kadr48 = new Graphics::TBitmap(),
+				   *fon_kadr49 = new Graphics::TBitmap(),
+				   *fon_kadr50 = new Graphics::TBitmap(),
+				   *fon_kadr51 = new Graphics::TBitmap(),
+				   *fon_kadr52 = new Graphics::TBitmap(),
+				   *fon_kadr53 = new Graphics::TBitmap(),
+				   *fon_kadr54 = new Graphics::TBitmap(),
+				   *fon_kadr55 = new Graphics::TBitmap(),
+				   *fon_kadr56 = new Graphics::TBitmap(),
+				   *fon_kadr57 = new Graphics::TBitmap(),
+				   *fon_kadr58 = new Graphics::TBitmap(),
+				   *fon_kadr59 = new Graphics::TBitmap(),
+				   *fon_kadr60 = new Graphics::TBitmap(),
+				   *fon_kadr61 = new Graphics::TBitmap(),
+				   *fon_kadr62 = new Graphics::TBitmap(),
+				   *fon_kadr63 = new Graphics::TBitmap(),
+				   *fon_kadr64 = new Graphics::TBitmap(),
+				   *fon_kadr65 = new Graphics::TBitmap(),
+				   *fon_kadr66 = new Graphics::TBitmap(),
+				   *fon_kadr67 = new Graphics::TBitmap(),
+				   *fon_kadr68 = new Graphics::TBitmap(),
+				   *fon_kadr69 = new Graphics::TBitmap(),
+				   *fon_kadr70 = new Graphics::TBitmap(),
+				   *fon_kadr71 = new Graphics::TBitmap(),
+				   *fon_kadr72 = new Graphics::TBitmap(),
+				   *fon_kadr73 = new Graphics::TBitmap(),
+				   *fon_kadr74 = new Graphics::TBitmap(),
+				   *fon_kadr75 = new Graphics::TBitmap(),
+				   *fon_kadr76 = new Graphics::TBitmap(),
+				   *fon_kadr77 = new Graphics::TBitmap(),
+				   *fon_kadr78 = new Graphics::TBitmap(),
+				   *fon_kadr79 = new Graphics::TBitmap(),
+				   *fon_kadr80 = new Graphics::TBitmap(),
+				   *fon_kadr81 = new Graphics::TBitmap(),
+				   *fon_kadr82 = new Graphics::TBitmap(),
+				   *fon_kadr83 = new Graphics::TBitmap(),
+				   *fon_kadr84 = new Graphics::TBitmap(),
+				   *fon_kadr85 = new Graphics::TBitmap(),
+				   *fon_kadr86 = new Graphics::TBitmap(),
+				   *fon_kadr87 = new Graphics::TBitmap(),
+				   *fon_kadr88 = new Graphics::TBitmap(),
+				   *fon_kadr89 = new Graphics::TBitmap(),
+				   *fon_kadr90 = new Graphics::TBitmap(),
+				   *fon_kadr91 = new Graphics::TBitmap(),
+				   *fon_kadr92 = new Graphics::TBitmap(),
+				   *fon_kadr93 = new Graphics::TBitmap(),
+				   *fon_kadr94 = new Graphics::TBitmap(),
+				   *fon_kadr95 = new Graphics::TBitmap(),
+				   *fon_kadr96 = new Graphics::TBitmap(),
+				   *fon_kadr97 = new Graphics::TBitmap(),
+				   *fon_kadr98 = new Graphics::TBitmap(),
+				   *fon_kadr99 = new Graphics::TBitmap(),
+				   *fon_kadr100 = new Graphics::TBitmap(),
+				   *fon_kadr101 = new Graphics::TBitmap(),
+				   *fon_kadr102 = new Graphics::TBitmap(),
+				   *fon_kadr103 = new Graphics::TBitmap(),
+				   *fon_kadr104 = new Graphics::TBitmap(),
+				   *fon_kadr105 = new Graphics::TBitmap(),
+				   *fon_kadr106 = new Graphics::TBitmap(),
+				   *fon_kadr107 = new Graphics::TBitmap(),
+				   *fon_kadr108 = new Graphics::TBitmap(),
+				   *fon_kadr109 = new Graphics::TBitmap(),
+				   *fon_kadr110 = new Graphics::TBitmap(),
+				   *fon_kadr111 = new Graphics::TBitmap(),
+				   *fon_kadr112 = new Graphics::TBitmap(),
+				   *fon_kadr113 = new Graphics::TBitmap(),
+				   *fon_kadr114 = new Graphics::TBitmap(),
+				   *fon_kadr115 = new Graphics::TBitmap(),
+				   *fon_kadr116 = new Graphics::TBitmap(),
+				   *fon_kadr117 = new Graphics::TBitmap(),
+				   *fon_kadr118 = new Graphics::TBitmap(),
+				   *fon_kadr119 = new Graphics::TBitmap(),
+				   *fon_kadr120 = new Graphics::TBitmap(),
+				   *fon_kadr121 = new Graphics::TBitmap(),
+				   *fon_kadr122 = new Graphics::TBitmap(),
+				   *fon_kadr123 = new Graphics::TBitmap(),
+				   *fon_kadr124 = new Graphics::TBitmap(),
+				   *fon_kadr125 = new Graphics::TBitmap(),
+				   *fon_kadr126 = new Graphics::TBitmap(),
+				   *fon_kadr127 = new Graphics::TBitmap(),
+				   *fon_kadr128 = new Graphics::TBitmap(),
+				   *fon_kadr129 = new Graphics::TBitmap(),
+				   *fon_kadr130 = new Graphics::TBitmap(),
+				   *fon_kadr131 = new Graphics::TBitmap(),
+				   *fon_kadr132 = new Graphics::TBitmap(),
+				   *fon_kadr133 = new Graphics::TBitmap(),
+				   *fon_kadr134 = new Graphics::TBitmap(),
+				   *fon_kadr135 = new Graphics::TBitmap(),
+				   *fon_kadr136 = new Graphics::TBitmap(),
+				   *fon_kadr137 = new Graphics::TBitmap(),
+				   *fon_kadr138 = new Graphics::TBitmap(),
+				   *fon_kadr139 = new Graphics::TBitmap(),
+				   *fon_kadr140 = new Graphics::TBitmap(),
+				   *fon_kadr141 = new Graphics::TBitmap(),
+				   *fon_kadr142 = new Graphics::TBitmap(),
+				   *fon_kadr143 = new Graphics::TBitmap(),
+				   *fon_kadr144 = new Graphics::TBitmap(),
+				   *fon_kadr145 = new Graphics::TBitmap(),
+				   *fon_kadr146 = new Graphics::TBitmap(),
+				   *fon_kadr147 = new Graphics::TBitmap(),
+				   *fon_kadr148 = new Graphics::TBitmap(),
+				   *fon_kadr149 = new Graphics::TBitmap(),
+				   *fon_kadr150 = new Graphics::TBitmap(),
+				   *fon_kadr151 = new Graphics::TBitmap();
+double w, h, x_line1=450, y_line1 = -875,y_line2 = -1025,y_line3 = -1175,
+y_line4 = -1325,y_line5 = -1475,
+y_line6 = -1625,y_line7 = -1775,
+y_line8 = -1925,y_line9 = -2075,
+y_line10 = -2225,y_line11 = -2375,
+y_line12 = -2525,y_line13 = -2675,
+y_line14 = -2825,y_line15 = -2975,
+y_line16 = -3125,y_line17 = -3275,
+y_line18 = -3425,y_line19 = -3575,
+y_line20 = -3725,y_line21 = -3875,
+y_line22 = -4025,y_line23 = -4175,
+y_line24 = -4325,y_line25 = -4475,
+y_line26 = -4625,y_line27 = -4775,
+y_line28 = -4925,y_line29 = -5075,
+y_line30 = -5125,y_line31 = -5375,//
+y_line32 = -5375,y_line33 = -5525,
+y_line34 = -5675,y_line35 = -5825,
+y_line36 = -5975,y_line37 = -6125,
+y_line38 = -6275,y_line39 = -6425,
+y_line40 = -6575,y_line41 = -6725,
+y_line42 = -6875,y_line43 = -7025,
+y_line44 = -7175,y_line45 = -7325,
+y_line46 = -7475,y_line47 = -7625,
+y_line48 = -7775,y_line49 = -7925,
+y_line50 = -8075,y_line51 = -8225,
+y_line52 = -8375,y_line53 = -8525,
+y_line54 = -8675,y_line55 = -8825,
+y_line56 = -8975,y_line57 = -9125,//
+y_line58 = -9125,y_line59 = -9275,
+y_line60 = -9425,y_line61 = -9575,
+y_line62 = -9725,y_line63 = -9875,
+y_line64 = -10025,y_line65 = -10175,
+y_line66 = -10325,y_line67 = -10475,
+y_line68 = -10625,y_line69 = -10775,
+y_line70 = -10925,y_line71 = -11075,
+y_line72 = -11225,y_line73 = -11375,
+y_line74 = -11525,y_line75 = -11525,//
+y_line76 = -11675,y_line77 = -11825,
+y_line78 = -11975,y_line79 = -12125,
+y_line80 = -12275,y_line81 = -12425,
+y_line82 = -125575,y_line83 = -12725,
+y_line84 = -12875,y_line85 = -13025,
+y_line86 = -13175,y_line87 = -13325,
+y_line88 = -13475,y_line89 = -13625,
+y_line90 = -13775,y_line91 = -13925,//
+y_line92 = -13925,y_line93 = -14075,
+y_line94 = -14225,y_line95 = -14375,
+y_line96 = -14525,y_line97 = -14675,
+y_line98 = -14825,y_line99 = -14975,
+y_line100 = -15125,y_line101 = -15275,
+y_line102 = -15425,y_line103 = -15575,
+y_line104 = -15725,y_line105 = -15875,
+y_line106 = -16025,y_line107 = -16175,
+y_line108 = -16325,y_line109= -16475,
+y_line110 = -16625,y_line111= -16775,
+y_line112 = -16925,y_line113 = -17075,
+y_line114 = -17225,y_line115 = -17375,
+y_line116 = -17525,y_line117 = -17675,
+y_line118 = -17825,y_line119 = -17975,
+y_line120 = -18125,y_line121 = -18275,
+y_line122 = -18425,y_line123 = -18575,
+y_line124 = -18725,y_line125 = -18725,//
+y_line126 = -18875,y_line127 = -19025,
+y_line128 = -19175,y_line129 = -19325,
+y_line130 = -19475,y_line131 = -19625,
+y_line132 = -19775,y_line133 = -19925,
+y_line134 = -20075,y_line135 = -20225,
+y_line136 = -20375,y_line137 = -20525,
+y_line138 = -20675,y_line139 = -20825,
+y_line140 = -20975,y_line141 = -21125,//
+y_line142 = -21125,y_line143 = -21275,
+y_line144 = -21425,y_line145 = -21575,
+y_line146 = -21725,y_line147 = -21875,
+y_line148 = -22025,y_line149 = -22175,
+y_line150 = -22325,y_line151 = -22475,
+
+x_line2=300,x_line3=450,x_line4=300,
+x_line5=450,x_line6=0,x_line7=450,
+x_line8=300,x_line9=0,x_line10=300,
+x_line11=150,x_line12=450,x_line13=150,
+x_line14=150,x_line15=0 ,x_line16=0,
+x_line17=300,x_line18=450,x_line19=300,
+x_line20=450,x_line21=0,x_line22=450,
+x_line23=300,x_line24=150,x_line25=300,
+x_line26=150,x_line27=450,x_line28=150,
+x_line29=150,x_line30=0 ,x_line31=0,
+x_line32=300,x_line33=450,x_line34=300,
+x_line35=450,x_line36=0,x_line37=450,
+x_line38=300,x_line39=150,x_line40=300,
+x_line41=150,x_line42=450,x_line43=150,
+x_line44=150,x_line45=0 ,x_line46=0,
+x_line47=300,x_line48=450,x_line49=300,
+x_line50=450,x_line51=0,x_line52=450,
+x_line53=300,x_line54=150,x_line55=300,
+x_line56=150,x_line57=450,x_line58=150,
+x_line59=150,x_line60=0 ,x_line61=0,
+x_line62=300,x_line63=450,x_line64=300,
+x_line65=450,x_line66=0,x_line67=450,
+x_line68=300,x_line69=150,x_line70=300,
+x_line71=150,x_line72=450,x_line73=150,
+x_line74=150,x_line75=0 ,x_line76=0,
+x_line77=300,x_line78=450,x_line79=300,
+x_line80=450,x_line81=0,x_line82=450,
+x_line83=300,x_line84=150,x_line85=300,
+x_line86=150,x_line87=450,x_line88=150,
+x_line89=150,x_line90=0 ,x_line91=0,
+x_line92=300,x_line93=450,x_line94=300,
+x_line95=450,x_line96=0,x_line97=450,
+x_line98=300,x_line99=150,x_line100=300,
+x_line101=150,x_line102=450,x_line103=150,
+x_line104=150,x_line105=0 ,x_line106=0,
+x_line107=300,x_line108=450,x_line109=300,
+x_line110=450,x_line111=0,x_line112=450,
+x_line113=300,x_line114=150,x_line115=300,
+x_line116=150,x_line117=450,x_line118=150,
+x_line119=150,x_line120=0 ,x_line121=0,
+x_line122=300,x_line123=450,x_line124=300,
+x_line125=450,x_line126=0,x_line127=450,
+x_line128=300,x_line129=150,x_line130=300,
+x_line131=150,x_line132=450,x_line133=150,
+x_line134=150,x_line135=0 ,x_line136=0,
+x_line137=300,x_line138=450,x_line139=300,
+x_line140=450,x_line141=0,x_line142=450,
+x_line143=300,x_line144=150,x_line145=300,
+x_line146=150,x_line147=450,x_line148=150,
+x_line149=150,x_line150=0 ,x_line151=0;
+
+double v0;
+bool kost = true;
+double u;
+double i = 0;
+int k1 = 81;
+int k2 = 87;
+int k3 = 69;
+int k4 = 82;
+int y = 0;
+extern int theme;
+extern int key;
+extern int mode;
+double t=0;
+double k=0;
+bool line1 = false;
+bool line2 = false;
+bool line3 = false;
+bool line4 = false;
+bool line5 = false;
+bool line6 = false;
+bool line7 = false;
+bool line8 = false;
+bool line9 = false;
+bool line10 = false;
+bool line11 = false;
+bool line12 = false;
+bool line13 = false;
+bool line14 = false;
+bool line15 = false;
+bool line16 = false;
+bool line17 = false;
+bool line18 = false;
+bool line19 = false;
+bool line20 = false;
+bool line21 = false;
+bool line22 = false;
+bool line23 = false;
+bool line24 = false;
+bool line25 = false;
+bool line26 = false;
+bool line27 = false;
+bool line28 = false;
+bool line29 = false;
+bool line30 = false;
+bool line31 = false;
+bool line32 = false;
+bool line33 = false;
+bool line34 = false;
+bool line35 = false;
+bool line36 = false;
+bool line37 = false;
+bool line38 = false;
+bool line39 = false;
+bool line40 = false;
+bool line41 = false;
+bool line42 = false;
+bool line43 = false;
+bool line44 = false;
+bool line45 = false;
+bool line46 = false;
+bool line47 = false;
+bool line48 = false;
+bool line49 = false;
+bool line50 = false;
+bool line51 = false;
+bool line52 = false;
+bool line53 = false;
+bool line54 = false;
+bool line55 = false;
+bool line56 = false;
+bool line57 = false;
+bool line58 = false;
+bool line59 = false;
+bool line60 = false;
+bool line61 = false;
+bool line62 = false;
+bool line63 = false;
+bool line64 = false;
+bool line65 = false;
+bool line66 = false;
+bool line67 = false;
+bool line68 = false;
+bool line69 = false;
+bool line70 = false;
+bool line71 = false;
+bool line72 = false;
+bool line73 = false;
+bool line74 = false;
+bool line75 = false;
+bool line76 = false;
+bool line77 = false;
+bool line78 = false;
+bool line79 = false;
+bool line80 = false;
+bool line81 = false;
+bool line82 = false;
+bool line83 = false;
+bool line84 = false;
+bool line85 = false;
+bool line86 = false;
+bool line87 = false;
+bool line88 = false;
+bool line89 = false;
+bool line90 = false;
+bool line91 = false;
+bool line92 = false;
+bool line93 = false;
+bool line94 = false;
+bool line95 = false;
+bool line96 = false;
+bool line97 = false;
+bool line98 = false;
+bool line99 = false;
+bool line100 = false;
+bool line101 = false;
+bool line102 = false;
+bool line103 = false;
+bool line104 = false;
+bool line105 = false;
+bool line106 = false;
+bool line107 = false;
+bool line108 = false;
+bool line109 = false;
+bool line110 = false;
+bool line111 = false;
+bool line112 = false;
+bool line113 = false;
+bool line114 = false;
+bool line115 = false;
+bool line116 = false;
+bool line117 = false;
+bool line118 = false;
+bool line119 = false;
+bool line120 = false;
+bool line121 = false;
+bool line122 = false;
+bool line123 = false;
+bool line124 = false;
+bool line125 = false;
+bool line126 = false;
+bool line127 = false;
+bool line128 = false;
+bool line129 = false;
+bool line130 = false;
+bool line131 = false;
+bool line132 = false;
+bool line133 = false;
+bool line134 = false;
+bool line135 = false;
+bool line136 = false;
+bool line137 = false;
+bool line138 = false;
+bool line139 = false;
+bool line140 = false;
+bool line141 = false;
+bool line142 = false;
+bool line143 = false;
+bool line144 = false;
+bool line145 = false;
+bool line146 = false;
+bool line147 = false;
+bool line148 = false;
+bool line149 = false;
+bool line150 = false;
+bool line151 = false;
+
+
+TRect pr_kadr, pr_fon1,pr_fon2,pr_fon3,pr_fon4,pr_fon5,pr_fon6,pr_fon7,pr_fon8,pr_fon9,
+pr_fon10,pr_fon11,pr_fon12,pr_fon13,pr_fon14,pr_fon15,pr_fon16,pr_fon17,pr_fon18,pr_fon19,
+pr_fon20,pr_fon21,pr_fon22,pr_fon23,pr_fon24,pr_fon25,pr_fon26,pr_fon27,pr_fon28,pr_fon29,
+pr_fon30,pr_fon31,pr_fon32,pr_fon33,pr_fon34,pr_fon35,pr_fon36,pr_fon37,pr_fon38,pr_fon39,
+pr_fon40,pr_fon41,pr_fon42,pr_fon43,pr_fon44,pr_fon45,pr_fon46,pr_fon47,pr_fon48,pr_fon49,
+pr_fon50,pr_fon51,pr_fon52,pr_fon53,pr_fon54,pr_fon55,pr_fon56,pr_fon57,pr_fon58,pr_fon59,
+pr_fon60,pr_fon61,pr_fon62,pr_fon63,pr_fon64,pr_fon65,pr_fon66,pr_fon67,pr_fon68,pr_fon69,
+pr_fon70,pr_fon71,pr_fon72,pr_fon73,pr_fon74,pr_fon75,pr_fon76,pr_fon77,pr_fon78,pr_fon79,
+pr_fon80,pr_fon81,pr_fon82,pr_fon83,pr_fon84,pr_fon85,pr_fon86,pr_fon87,pr_fon88,pr_fon89,
+pr_fon90,pr_fon91,pr_fon92,pr_fon93,pr_fon94,pr_fon95,pr_fon96,pr_fon97,pr_fon98,pr_fon99,
+pr_fon100,pr_fon101,pr_fon102,pr_fon103,pr_fon104,pr_fon105,pr_fon106,pr_fon107,pr_fon108,pr_fon109,
+pr_fon110,pr_fon111,pr_fon112,pr_fon113,pr_fon114,pr_fon115,pr_fon116,pr_fon117,pr_fon118,pr_fon119,
+pr_fon120,pr_fon121,pr_fon122,pr_fon123,pr_fon124,pr_fon125,pr_fon126,pr_fon127,pr_fon128,pr_fon129,
+pr_fon130,pr_fon131,pr_fon132,pr_fon133,pr_fon134,pr_fon135,pr_fon136,pr_fon137,pr_fon138,pr_fon139,
+pr_fon140,pr_fon141,pr_fon142,pr_fon143,pr_fon144,pr_fon145,pr_fon146,pr_fon147,pr_fon148,pr_fon149,
+pr_fon150,pr_fon151;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Timer1Timer(TObject *Sender)
+{
+	y++;
+	Image1 -> Canvas -> Draw (x_line1, y_line1, fon_kadr1);
+	Image1 -> Canvas -> Draw (x_line2, y_line2, fon_kadr2);
+	Image1 -> Canvas -> Draw (x_line3, y_line3, fon_kadr3);
+	Image1 -> Canvas -> Draw (x_line4, y_line4, fon_kadr4);
+	Image1 -> Canvas -> Draw (x_line5, y_line5, fon_kadr5);
+	Image1 -> Canvas -> Draw (x_line6, y_line6, fon_kadr6);
+	Image1 -> Canvas -> Draw (x_line7, y_line7, fon_kadr7);
+	Image1 -> Canvas -> Draw (x_line8, y_line8, fon_kadr8);
+	Image1 -> Canvas -> Draw (x_line9, y_line9, fon_kadr9);
+	Image1 -> Canvas -> Draw (x_line10, y_line10, fon_kadr10);
+	Image1 -> Canvas -> Draw (x_line11, y_line11, fon_kadr11);
+	Image1 -> Canvas -> Draw (x_line12, y_line12, fon_kadr12);
+	Image1 -> Canvas -> Draw (x_line13, y_line13, fon_kadr13);
+	Image1 -> Canvas -> Draw (x_line14, y_line14, fon_kadr14);
+	Image1 -> Canvas -> Draw (x_line15, y_line15, fon_kadr15);
+	Image1 -> Canvas -> Draw (x_line16, y_line16, fon_kadr16);
+	Image1 -> Canvas -> Draw (x_line17, y_line17, fon_kadr17);
+	Image1 -> Canvas -> Draw (x_line18, y_line18, fon_kadr18);
+	Image1 -> Canvas -> Draw (x_line19, y_line19, fon_kadr19);
+	Image1 -> Canvas -> Draw (x_line20, y_line20, fon_kadr20);
+	Image1 -> Canvas -> Draw (x_line21, y_line21, fon_kadr21);
+	Image1 -> Canvas -> Draw (x_line22, y_line22, fon_kadr22);
+	Image1 -> Canvas -> Draw (x_line23, y_line23, fon_kadr23);
+	Image1 -> Canvas -> Draw (x_line24, y_line24, fon_kadr24);
+	Image1 -> Canvas -> Draw (x_line25, y_line25, fon_kadr25);
+	Image1 -> Canvas -> Draw (x_line26, y_line26, fon_kadr26);
+	Image1 -> Canvas -> Draw (x_line27, y_line27, fon_kadr27);
+	Image1 -> Canvas -> Draw (x_line28, y_line28, fon_kadr28);
+	Image1 -> Canvas -> Draw (x_line29, y_line29, fon_kadr29);
+	Image1 -> Canvas -> Draw (x_line30, y_line30, fon_kadr30);
+	Image1 -> Canvas -> Draw (x_line31, y_line31, fon_kadr31);
+	Image1 -> Canvas -> Draw (x_line32, y_line32, fon_kadr32);
+	Image1 -> Canvas -> Draw (x_line33, y_line33, fon_kadr33);
+	Image1 -> Canvas -> Draw (x_line34, y_line34, fon_kadr34);
+	Image1 -> Canvas -> Draw (x_line35, y_line35, fon_kadr35);
+	Image1 -> Canvas -> Draw (x_line36, y_line36, fon_kadr36);
+	Image1 -> Canvas -> Draw (x_line37, y_line37, fon_kadr37);
+	Image1 -> Canvas -> Draw (x_line38, y_line38, fon_kadr38);
+	Image1 -> Canvas -> Draw (x_line39, y_line39, fon_kadr39);
+	Image1 -> Canvas -> Draw (x_line40, y_line40, fon_kadr40);
+	Image1 -> Canvas -> Draw (x_line41, y_line41, fon_kadr41);
+	Image1 -> Canvas -> Draw (x_line42, y_line42, fon_kadr42);
+	Image1 -> Canvas -> Draw (x_line43, y_line43, fon_kadr43);
+	Image1 -> Canvas -> Draw (x_line44, y_line44, fon_kadr44);
+	Image1 -> Canvas -> Draw (x_line45, y_line45, fon_kadr45);
+	Image1 -> Canvas -> Draw (x_line46, y_line46, fon_kadr46);
+	Image1 -> Canvas -> Draw (x_line47, y_line47, fon_kadr47);
+	Image1 -> Canvas -> Draw (x_line48, y_line48, fon_kadr48);
+	Image1 -> Canvas -> Draw (x_line49, y_line49, fon_kadr49);
+	Image1 -> Canvas -> Draw (x_line50, y_line50, fon_kadr50);
+	Image1 -> Canvas -> Draw (x_line51, y_line51, fon_kadr51);
+	Image1 -> Canvas -> Draw (x_line52, y_line52, fon_kadr52);
+	Image1 -> Canvas -> Draw (x_line53, y_line53, fon_kadr53);
+	Image1 -> Canvas -> Draw (x_line54, y_line54, fon_kadr54);
+	Image1 -> Canvas -> Draw (x_line55, y_line55, fon_kadr55);
+	Image1 -> Canvas -> Draw (x_line56, y_line56, fon_kadr56);
+	Image1 -> Canvas -> Draw (x_line57, y_line57, fon_kadr57);
+	Image1 -> Canvas -> Draw (x_line58, y_line58, fon_kadr58);
+	Image1 -> Canvas -> Draw (x_line59, y_line59, fon_kadr59);
+	Image1 -> Canvas -> Draw (x_line60, y_line60, fon_kadr60);
+	Image1 -> Canvas -> Draw (x_line61, y_line61, fon_kadr61);
+	Image1 -> Canvas -> Draw (x_line62, y_line62, fon_kadr62);
+	Image1 -> Canvas -> Draw (x_line63, y_line63, fon_kadr63);
+	Image1 -> Canvas -> Draw (x_line64, y_line64, fon_kadr64);
+	Image1 -> Canvas -> Draw (x_line65, y_line65, fon_kadr65);
+	Image1 -> Canvas -> Draw (x_line66, y_line66, fon_kadr66);
+	Image1 -> Canvas -> Draw (x_line67, y_line67, fon_kadr67);
+	Image1 -> Canvas -> Draw (x_line68, y_line68, fon_kadr68);
+	Image1 -> Canvas -> Draw (x_line69, y_line69, fon_kadr69);
+	Image1 -> Canvas -> Draw (x_line70, y_line70, fon_kadr70);
+	Image1 -> Canvas -> Draw (x_line71, y_line71, fon_kadr71);
+	Image1 -> Canvas -> Draw (x_line72, y_line72, fon_kadr72);
+	Image1 -> Canvas -> Draw (x_line73, y_line73, fon_kadr73);
+	Image1 -> Canvas -> Draw (x_line74, y_line74, fon_kadr74);
+	Image1 -> Canvas -> Draw (x_line75, y_line75, fon_kadr75);
+	Image1 -> Canvas -> Draw (x_line76, y_line76, fon_kadr76);
+	Image1 -> Canvas -> Draw (x_line77, y_line77, fon_kadr77);
+	Image1 -> Canvas -> Draw (x_line78, y_line78, fon_kadr78);
+	Image1 -> Canvas -> Draw (x_line79, y_line79, fon_kadr79);
+	Image1 -> Canvas -> Draw (x_line80, y_line80, fon_kadr80);
+	Image1 -> Canvas -> Draw (x_line81, y_line81, fon_kadr81);
+	Image1 -> Canvas -> Draw (x_line82, y_line82, fon_kadr82);
+	Image1 -> Canvas -> Draw (x_line83, y_line83, fon_kadr83);
+	Image1 -> Canvas -> Draw (x_line84, y_line84, fon_kadr84);
+	Image1 -> Canvas -> Draw (x_line85, y_line85, fon_kadr85);
+	Image1 -> Canvas -> Draw (x_line86, y_line86, fon_kadr86);
+	Image1 -> Canvas -> Draw (x_line87, y_line87, fon_kadr87);
+	Image1 -> Canvas -> Draw (x_line88, y_line88, fon_kadr88);
+	Image1 -> Canvas -> Draw (x_line89, y_line89, fon_kadr89);
+	Image1 -> Canvas -> Draw (x_line90, y_line90, fon_kadr90);
+	Image1 -> Canvas -> Draw (x_line91, y_line91, fon_kadr91);
+	Image1 -> Canvas -> Draw (x_line92, y_line92, fon_kadr92);
+	Image1 -> Canvas -> Draw (x_line93, y_line93, fon_kadr93);
+	Image1 -> Canvas -> Draw (x_line94, y_line94, fon_kadr94);
+	Image1 -> Canvas -> Draw (x_line95, y_line95, fon_kadr95);
+	Image1 -> Canvas -> Draw (x_line96, y_line96, fon_kadr96);
+	Image1 -> Canvas -> Draw (x_line97, y_line97, fon_kadr97);
+	Image1 -> Canvas -> Draw (x_line98, y_line98, fon_kadr98);
+	Image1 -> Canvas -> Draw (x_line99, y_line99, fon_kadr99);
+	Image1 -> Canvas -> Draw (x_line100, y_line100, fon_kadr100);
+	Image1 -> Canvas -> Draw (x_line101, y_line101, fon_kadr101);
+	Image1 -> Canvas -> Draw (x_line102, y_line102, fon_kadr102);
+	Image1 -> Canvas -> Draw (x_line103, y_line103, fon_kadr103);
+	Image1 -> Canvas -> Draw (x_line104, y_line104, fon_kadr104);
+	Image1 -> Canvas -> Draw (x_line105, y_line105, fon_kadr105);
+	Image1 -> Canvas -> Draw (x_line106, y_line106, fon_kadr106);
+	Image1 -> Canvas -> Draw (x_line107, y_line107, fon_kadr107);
+	Image1 -> Canvas -> Draw (x_line108, y_line108, fon_kadr108);
+	Image1 -> Canvas -> Draw (x_line109, y_line109, fon_kadr109);
+	Image1 -> Canvas -> Draw (x_line110, y_line110, fon_kadr110);
+	Image1 -> Canvas -> Draw (x_line111, y_line111, fon_kadr111);
+	Image1 -> Canvas -> Draw (x_line112, y_line112, fon_kadr112);
+	Image1 -> Canvas -> Draw (x_line113, y_line113, fon_kadr113);
+	Image1 -> Canvas -> Draw (x_line114, y_line114, fon_kadr114);
+	Image1 -> Canvas -> Draw (x_line115, y_line115, fon_kadr115);
+	Image1 -> Canvas -> Draw (x_line116, y_line116, fon_kadr116);
+	Image1 -> Canvas -> Draw (x_line117, y_line117, fon_kadr117);
+	Image1 -> Canvas -> Draw (x_line118, y_line118, fon_kadr118);
+	Image1 -> Canvas -> Draw (x_line119, y_line119, fon_kadr119);
+	Image1 -> Canvas -> Draw (x_line120, y_line120, fon_kadr120);
+	Image1 -> Canvas -> Draw (x_line121, y_line121, fon_kadr121);
+	Image1 -> Canvas -> Draw (x_line122, y_line122, fon_kadr122);
+	Image1 -> Canvas -> Draw (x_line123, y_line123, fon_kadr123);
+	Image1 -> Canvas -> Draw (x_line124, y_line124, fon_kadr124);
+	Image1 -> Canvas -> Draw (x_line125, y_line125, fon_kadr125);
+	Image1 -> Canvas -> Draw (x_line126, y_line126, fon_kadr126);
+	Image1 -> Canvas -> Draw (x_line127, y_line127, fon_kadr127);
+	Image1 -> Canvas -> Draw (x_line128, y_line128, fon_kadr128);
+	Image1 -> Canvas -> Draw (x_line129, y_line129, fon_kadr129);
+	Image1 -> Canvas -> Draw (x_line130, y_line130, fon_kadr120);
+	Image1 -> Canvas -> Draw (x_line131, y_line131, fon_kadr131);
+	Image1 -> Canvas -> Draw (x_line132, y_line132, fon_kadr132);
+	Image1 -> Canvas -> Draw (x_line133, y_line133, fon_kadr133);
+	Image1 -> Canvas -> Draw (x_line134, y_line134, fon_kadr134);
+	Image1 -> Canvas -> Draw (x_line135, y_line135, fon_kadr135);
+	Image1 -> Canvas -> Draw (x_line136, y_line136, fon_kadr136);
+	Image1 -> Canvas -> Draw (x_line137, y_line137, fon_kadr137);
+	Image1 -> Canvas -> Draw (x_line138, y_line138, fon_kadr138);
+	Image1 -> Canvas -> Draw (x_line139, y_line139, fon_kadr139);
+	Image1 -> Canvas -> Draw (x_line140, y_line140, fon_kadr140);
+	Image1 -> Canvas -> Draw (x_line141, y_line141, fon_kadr141);
+	Image1 -> Canvas -> Draw (x_line142, y_line142, fon_kadr142);
+	Image1 -> Canvas -> Draw (x_line143, y_line143, fon_kadr143);
+	Image1 -> Canvas -> Draw (x_line144, y_line144, fon_kadr144);
+	Image1 -> Canvas -> Draw (x_line145, y_line145, fon_kadr145);
+	Image1 -> Canvas -> Draw (x_line146, y_line146, fon_kadr146);
+	Image1 -> Canvas -> Draw (x_line147, y_line147, fon_kadr147);
+	Image1 -> Canvas -> Draw (x_line148, y_line148, fon_kadr148);
+	Image1 -> Canvas -> Draw (x_line149, y_line149, fon_kadr149);
+	Image1 -> Canvas -> Draw (x_line150, y_line150, fon_kadr150);
+	Image1 -> Canvas -> Draw (x_line151, y_line151, fon_kadr151);
+	y_line1 += 7.6;
+	y_line2 += 7.6;
+	y_line3 +=7.6;
+	y_line4 += 7.6;
+	y_line5 += 7.6;
+	y_line6 += 7.6;
+	y_line7 += 7.6;
+	y_line8 += 7.6;
+	y_line9 += 7.6;
+	y_line10 += 7.6;
+	y_line11 += 7.6;
+	y_line12 += 7.6;
+	y_line13 += 7.6;
+	y_line14 += 7.6;
+	y_line15 += 7.6;
+	y_line16 += 7.6;
+	y_line17 += 7.6;
+	y_line18 += 7.6;
+	y_line19 += 7.6;
+	y_line20 +=7.6;
+	y_line21 += 7.6;
+	y_line22 += 7.6;
+	y_line23 +=7.6;
+	y_line24 += 7.6;
+	y_line25 += 7.6;
+	y_line26 += 7.6;
+	y_line27 += 7.6;
+	y_line28 += 7.6;
+	y_line29 += 7.6;
+	y_line30 += 7.6;
+	y_line31 += 7.6;
+	y_line32 += 7.6;
+	y_line33 +=7.6;
+	y_line34 += 7.6;
+	y_line35 += 7.6;
+	y_line36 += 7.6;
+	y_line37 += 7.6;
+	y_line38 += 7.6;
+	y_line39 += 7.6;
+	y_line40 += 7.6;
+	y_line41 += 7.6;
+	y_line42 += 7.6;
+	y_line43 +=7.6;
+	y_line44 += 7.6;
+	y_line45 += 7.6;
+	y_line46 += 7.6;
+	y_line47 += 7.6;
+	y_line48 += 7.6;
+	y_line49 += 7.6;
+	y_line50 += 7.6;
+	y_line51 += 7.6;
+	y_line52 += 7.6;
+	y_line53 +=7.6;
+	y_line54 += 7.6;
+	y_line55 += 7.6;
+	y_line56 += 7.6;
+	y_line57 += 7.6;
+	y_line58 += 7.6;
+	y_line59 += 7.6;
+	y_line60 += 7.6;
+	y_line61 += 7.6;
+	y_line62 += 7.6;
+	y_line63 +=7.6;
+	y_line64 += 7.6;
+	y_line65 += 7.6;
+	y_line66 += 7.6;
+	y_line67 += 7.6;
+	y_line68 += 7.6;
+	y_line69 += 7.6;
+	y_line70 += 7.6;
+	y_line71 += 7.6;
+	y_line72 += 7.6;
+	y_line73 +=7.6;
+	y_line74 += 7.6;
+	y_line75 += 7.6;
+	y_line76 += 7.6;
+	y_line77 += 7.6;
+	y_line78 += 7.6;
+	y_line79 += 7.6;
+	y_line80 += 7.6;
+	y_line81 += 7.6;
+	y_line82 += 7.6;
+	y_line83 +=7.6;
+	y_line84 += 7.6;
+	y_line85 += 7.6;
+	y_line86 += 7.6;
+	y_line87 += 7.6;
+	y_line88 += 7.6;
+	y_line89 += 7.6;
+	y_line90 += 7.6;
+	y_line91 += 7.6;
+	y_line92 += 7.6;
+	y_line93 +=7.6;
+	y_line94 += 7.6;
+	y_line95 += 7.6;
+	y_line96 += 7.6;
+	y_line97 += 7.6;
+	y_line98 += 7.6;
+	y_line99 += 7.6;
+	y_line100 += 7.6;
+	y_line101 += 7.6;
+	y_line102 += 7.6;
+	y_line103 += 7.6;
+	y_line104 += 7.6;
+	y_line105 += 7.6;
+	y_line106 += 7.6;
+	y_line107 += 7.6;
+	y_line108 += 7.6;
+	y_line109 += 7.6;
+	y_line100 += 7.6;
+	y_line111 += 7.6;
+	y_line112 += 7.6;
+	y_line113 += 7.6;
+	y_line114 += 7.6;
+	y_line115 += 7.6;
+	y_line116 += 7.6;
+	y_line117 += 7.6;
+	y_line118 += 7.6;
+	y_line119 += 7.6;
+	y_line120 += 7.6;
+	y_line121 += 7.6;
+	y_line122 += 7.6;
+	y_line123 += 7.6;
+	y_line124 += 7.6;
+	y_line125 += 7.6;
+	y_line126 += 7.6;
+	y_line127 += 7.6;
+	y_line128 += 7.6;
+	y_line129 += 7.6;
+	y_line130 += 7.6;
+	y_line131 += 7.6;
+	y_line132 += 7.6;
+	y_line133 += 7.6;
+	y_line134 += 7.6;
+	y_line135 += 7.6;
+	y_line136 += 7.6;
+	y_line137 += 7.6;
+	y_line138 += 7.6;
+	y_line139 += 7.6;
+	y_line140 += 7.6;
+	y_line141 += 7.6;
+	y_line142 += 7.6;
+	y_line143 += 7.6;
+	y_line144 += 7.6;
+	y_line145 += 7.6;
+	y_line146 += 7.6;
+	y_line147 += 7.6;
+	y_line148 += 7.6;
+	y_line149 += 7.6;
+	y_line150 += 7.6;
+	y_line151 += 7.6;
+	Label1 -> Caption = y;
+	if (line1 == true)
+	{
+		pr_fon1 = Bounds(x_line1, y_line1, w, h);
+		fon_kadr1 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon1);
+		Image1 -> Canvas -> Draw(x_line1, y_line1, kadr2);
+	}
+	else
+	{
+	 pr_fon1 = Bounds(x_line1, y_line1, w, h);
+	 fon_kadr1 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon1);
+	 Image1 -> Canvas -> Draw(x_line1, y_line1, kadr);
+	}
+	if (line2 == true)
+	{
+		pr_fon2 = Bounds(x_line2, y_line2, w, h);
+		fon_kadr2 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon2);
+		Image1 -> Canvas -> Draw(x_line2, y_line2, kadr2);
+	}
+	else
+	{
+	 pr_fon2 = Bounds(x_line2, y_line2, w, h);
+	 fon_kadr2 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon2);
+	 Image1 -> Canvas -> Draw(x_line2, y_line2, kadr);
+	}
+	if (line3 == true)
+	{
+		pr_fon3 = Bounds(x_line3, y_line3, w, h);
+		fon_kadr3 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon3);
+		Image1 -> Canvas -> Draw(x_line3, y_line3, kadr2);
+	}
+	else
+	{
+	 pr_fon3 = Bounds(x_line3, y_line3, w, h);
+	 fon_kadr3 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon3);
+	 Image1 -> Canvas -> Draw(x_line3, y_line3, kadr);
+	}
+	if (line4 == true)
+	{
+		pr_fon4 = Bounds(x_line4, y_line4, w, h);
+		fon_kadr4 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon4);
+		Image1 -> Canvas -> Draw(x_line4, y_line4, kadr2);
+	}
+	else
+	{
+	 pr_fon4 = Bounds(x_line4, y_line4, w, h);
+	 fon_kadr4 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon4);
+	 Image1 -> Canvas -> Draw(x_line4, y_line4, kadr);
+	}
+	if (line5 == true)
+	{
+		pr_fon5 = Bounds(x_line5, y_line5, w, h);
+		fon_kadr5 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon5);
+		Image1 -> Canvas -> Draw(x_line5, y_line5, kadr2);
+	}
+	else
+	{
+	 pr_fon5 = Bounds(x_line5, y_line5, w, h);
+	 fon_kadr5 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon5);
+	 Image1 -> Canvas -> Draw(x_line5, y_line5, kadr);
+	}
+	if (line6 == true)
+	{
+		pr_fon6 = Bounds(x_line6, y_line6, w, h);
+		fon_kadr6 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon6);
+		Image1 -> Canvas -> Draw(x_line6, y_line6, kadr2);
+	}
+	else
+	{
+	 pr_fon6 = Bounds(x_line6, y_line6, w, h);
+		fon_kadr6 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon6);
+		Image1 -> Canvas -> Draw(x_line6, y_line6, kadr);
+	}
+	if (line7 == true)
+	{
+		pr_fon7 = Bounds(x_line7, y_line7, w, h);
+		fon_kadr7 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon7);
+		Image1 -> Canvas -> Draw(x_line7, y_line7, kadr2);
+	}
+	else
+	{
+	 pr_fon7 = Bounds(x_line7, y_line7, w, h);
+		fon_kadr7 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon7);
+		Image1 -> Canvas -> Draw(x_line7, y_line7, kadr);
+	}
+	if (line8 == true)
+	{
+		pr_fon8 = Bounds(x_line8, y_line8, w, h);
+		fon_kadr8 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon8);
+		Image1 -> Canvas -> Draw(x_line8, y_line8, kadr2);
+	}
+	else
+	{
+	 pr_fon8 = Bounds(x_line8, y_line8, w, h);
+		fon_kadr8 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon8);
+		Image1 -> Canvas -> Draw(x_line8, y_line8, kadr);
+	}
+	if (line9 == true)
+	{
+		pr_fon9 = Bounds(x_line9, y_line9, w, h);
+		fon_kadr9 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon9);
+		Image1 -> Canvas -> Draw(x_line9, y_line9, kadr2);
+	}
+	else
+	{
+	 pr_fon9 = Bounds(x_line9, y_line9, w, h);
+		fon_kadr9 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon9);
+		Image1 -> Canvas -> Draw(x_line9, y_line9, kadr);
+	}
+	if (line10 == true)
+	{
+		pr_fon10 = Bounds(x_line10, y_line10, w, h);
+		fon_kadr10 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon10);
+		Image1 -> Canvas -> Draw(x_line10, y_line10, kadr2);
+	}
+	else
+	{
+	 pr_fon10 = Bounds(x_line10, y_line10, w, h);
+		fon_kadr10 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon10);
+		Image1 -> Canvas -> Draw(x_line10, y_line10, kadr);
+	}
+	if (line11 == true)
+	{
+		pr_fon11 = Bounds(x_line11, y_line11, w, h);
+		fon_kadr11 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon11);
+		Image1 -> Canvas -> Draw(x_line11, y_line11, kadr2);
+	}
+	else
+	{
+		 pr_fon11 = Bounds(x_line11, y_line11, w, h);
+		fon_kadr11 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon11);
+		Image1 -> Canvas -> Draw(x_line11, y_line11, kadr);
+	}
+	if (line12 == true)
+	{
+		pr_fon12 = Bounds(x_line12, y_line12, w, h);
+		fon_kadr12 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon12);
+		Image1 -> Canvas -> Draw(x_line12, y_line12, kadr2);
+	}
+	else
+	{
+	 pr_fon12 = Bounds(x_line12, y_line12, w, h);
+		fon_kadr12 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon12);
+		Image1 -> Canvas -> Draw(x_line12, y_line12, kadr);
+	}
+	if (line13 == true)
+	{
+		pr_fon13 = Bounds(x_line13, y_line13, w, h);
+		fon_kadr13 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon13);
+		Image1 -> Canvas -> Draw(x_line13, y_line13, kadr2);
+	}
+	else
+	{
+	 pr_fon13 = Bounds(x_line13, y_line13, w, h);
+		fon_kadr13 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon13);
+		Image1 -> Canvas -> Draw(x_line13, y_line13, kadr);
+	}
+	if (line14 == true)
+	{
+		pr_fon14 = Bounds(x_line14, y_line14, w, h);
+		fon_kadr14 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon14);
+		Image1 -> Canvas -> Draw(x_line14, y_line14, kadr2);
+	}
+	else
+	{
+	 pr_fon14 = Bounds(x_line14, y_line14, w, h);
+		fon_kadr14 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon14);
+		Image1 -> Canvas -> Draw(x_line14, y_line14, kadr);
+	}
+	if (line15 == true)
+	{
+		pr_fon15 = Bounds(x_line15, y_line15, w, h);
+		fon_kadr15 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon15);
+		Image1 -> Canvas -> Draw(x_line15, y_line15, kadr2);
+	}
+	else
+	{
+	 pr_fon15 = Bounds(x_line15, y_line15, w, h);
+		fon_kadr15 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon15);
+		Image1 -> Canvas -> Draw(x_line15, y_line15, kadr);
+	}
+	if (line16 == true)
+	{
+		pr_fon16 = Bounds(x_line16, y_line16, w, h);
+		fon_kadr16 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon16);
+		Image1 -> Canvas -> Draw(x_line16, y_line16, kadr2);
+	}
+	else
+	{
+	 pr_fon16 = Bounds(x_line16, y_line16, w, h);
+		fon_kadr16 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon16);
+		Image1 -> Canvas -> Draw(x_line16, y_line16, kadr);
+	}
+	if (line17 == true)
+	{
+		pr_fon17 = Bounds(x_line17, y_line17, w, h);
+		fon_kadr7 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon17);
+		Image1 -> Canvas -> Draw(x_line7, y_line17, kadr2);
+	}
+	else
+	{
+	 pr_fon17 = Bounds(x_line17, y_line17, w, h);
+		fon_kadr17 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon17);
+		Image1 -> Canvas -> Draw(x_line17, y_line17, kadr);
+	}
+	if (line18 == true)
+	{
+		pr_fon18 = Bounds(x_line18, y_line18, w, h);
+		fon_kadr18 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon18);
+		Image1 -> Canvas -> Draw(x_line8, y_line18, kadr2);
+	}
+	else
+	{
+	 pr_fon18 = Bounds(x_line18, y_line18, w, h);
+		fon_kadr18 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon18);
+		Image1 -> Canvas -> Draw(x_line18, y_line18, kadr);
+	}
+	if (line19 == true)
+	{
+		pr_fon19 = Bounds(x_line19, y_line19, w, h);
+		fon_kadr19 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon19);
+		Image1 -> Canvas -> Draw(x_line19, y_line19, kadr2);
+	}
+	else
+	{
+	 pr_fon19 = Bounds(x_line19, y_line19, w, h);
+		fon_kadr19 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon19);
+		Image1 -> Canvas -> Draw(x_line19, y_line19, kadr);
+	}
+	if (line20 == true)
+	{
+		pr_fon20 = Bounds(x_line20, y_line20, w, h);
+		fon_kadr20 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon20);
+		Image1 -> Canvas -> Draw(x_line20, y_line20, kadr2);
+	}
+	else
+	{
+	pr_fon20 = Bounds(x_line20, y_line20, w, h);
+		fon_kadr20 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon20);
+		Image1 -> Canvas -> Draw(x_line20, y_line20, kadr);
+	}
+	if (line21 == true)
+	{
+		pr_fon1 = Bounds(x_line21, y_line21, w, h);
+		fon_kadr21 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon21);
+		Image1 -> Canvas -> Draw(x_line21, y_line21, kadr2);
+	}
+	else
+	{
+	 pr_fon21 = Bounds(x_line21, y_line21, w, h);
+	 fon_kadr21 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon21);
+	 Image1 -> Canvas -> Draw(x_line21, y_line21, kadr);
+	}
+	if (line22 == true)
+	{
+		pr_fon22 = Bounds(x_line22, y_line22, w, h);
+		fon_kadr22 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon22);
+		Image1 -> Canvas -> Draw(x_line22, y_line22, kadr2);
+	}
+	else
+	{
+	 pr_fon22 = Bounds(x_line22, y_line22, w, h);
+		fon_kadr22 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon22);
+		Image1 -> Canvas -> Draw(x_line22, y_line22, kadr);
+	}
+	if (line23 == true)
+	{
+		pr_fon23 = Bounds(x_line23, y_line23, w, h);
+		fon_kadr23 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon23);
+		Image1 -> Canvas -> Draw(x_line23, y_line23, kadr2);
+	}
+	else
+	{
+	 pr_fon23 = Bounds(x_line23, y_line23, w, h);
+	 fon_kadr23 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon23);
+	 Image1 -> Canvas -> Draw(x_line23, y_line23, kadr);
+	}
+	if (line24 == true)
+	{
+		pr_fon24 = Bounds(x_line24, y_line24, w, h);
+		fon_kadr24 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon24);
+		Image1 -> Canvas -> Draw(x_line24, y_line24, kadr2);
+	}
+	else
+	{
+	 pr_fon24 = Bounds(x_line24, y_line24, w, h);
+		fon_kadr24 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon24);
+		Image1 -> Canvas -> Draw(x_line24, y_line24, kadr);
+	}
+	if (line25 == true)
+	{
+		pr_fon25 = Bounds(x_line25, y_line25, w, h);
+		fon_kadr25 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon25);
+		Image1 -> Canvas -> Draw(x_line25, y_line25, kadr2);
+	}
+	else
+	{
+	 pr_fon25 = Bounds(x_line25, y_line25, w, h);
+		fon_kadr25 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon25);
+		Image1 -> Canvas -> Draw(x_line25, y_line25, kadr);
+	}
+	if (line26 == true)
+	{
+		pr_fon26 = Bounds(x_line26, y_line26, w, h);
+		fon_kadr26 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon26);
+		Image1 -> Canvas -> Draw(x_line26, y_line26, kadr2);
+	}
+	else
+	{
+	 pr_fon26 = Bounds(x_line26, y_line26, w, h);
+		fon_kadr26 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon26);
+		Image1 -> Canvas -> Draw(x_line26, y_line26, kadr);
+	}
+	if (line27 == true)
+	{
+		pr_fon27 = Bounds(x_line27, y_line27, w, h);
+		fon_kadr27 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon27);
+		Image1 -> Canvas -> Draw(x_line27, y_line27, kadr2);
+	}
+	else
+	{
+	 pr_fon27 = Bounds(x_line27, y_line27, w, h);
+		fon_kadr27 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon27);
+		Image1 -> Canvas -> Draw(x_line27, y_line27, kadr);
+	}
+	if (line28 == true)
+	{
+		pr_fon28 = Bounds(x_line28, y_line28, w, h);
+		fon_kadr28 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon28);
+		Image1 -> Canvas -> Draw(x_line28, y_line28, kadr2);
+	}
+	else
+	{
+	 pr_fon28 = Bounds(x_line28, y_line28, w, h);
+		fon_kadr28 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon28);
+		Image1 -> Canvas -> Draw(x_line28, y_line28, kadr);
+	}
+	if (line29 == true)
+	{
+		pr_fon29 = Bounds(x_line29, y_line29, w, h);
+		fon_kadr29 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon29);
+		Image1 -> Canvas -> Draw(x_line29, y_line29, kadr2);
+	}
+	else
+	{
+	 pr_fon29 = Bounds(x_line29, y_line29, w, h);
+		fon_kadr29 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon29);
+		Image1 -> Canvas -> Draw(x_line29, y_line29, kadr);
+	}
+	if (line30 == true)
+	{
+		pr_fon30 = Bounds(x_line30, y_line30, w, h);
+		fon_kadr30 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon30);
+		Image1 -> Canvas -> Draw(x_line30, y_line30, kadr2);
+	}
+	else
+	{
+	 pr_fon30 = Bounds(x_line30, y_line30, w, h);
+		fon_kadr30 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon30);
+		Image1 -> Canvas -> Draw(x_line30, y_line30, kadr);
+	}
+	if (line31 == true)
+	{
+		pr_fon31 = Bounds(x_line31, y_line31, w, h);
+		fon_kadr31 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon31);
+		Image1 -> Canvas -> Draw(x_line31, y_line31, kadr2);
+	}
+	else
+	{
+	 pr_fon31 = Bounds(x_line31, y_line31, w, h);
+		fon_kadr31 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon31);
+		Image1 -> Canvas -> Draw(x_line31, y_line31, kadr);
+	}
+	if (line32 == true)
+	{
+		pr_fon32 = Bounds(x_line32, y_line32, w, h);
+		fon_kadr32 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon32);
+		Image1 -> Canvas -> Draw(x_line32, y_line32, kadr2);
+	}
+	else
+	{
+	 pr_fon32 = Bounds(x_line32, y_line32, w, h);
+		fon_kadr32 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon32);
+		Image1 -> Canvas -> Draw(x_line32, y_line32, kadr);
+	}
+	if (line33 == true)
+	{
+		pr_fon33 = Bounds(x_line33, y_line33, w, h);
+		fon_kadr33 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon33);
+		Image1 -> Canvas -> Draw(x_line33, y_line33, kadr2);
+	}
+	else
+	{
+	 pr_fon33 = Bounds(x_line33, y_line33, w, h);
+		fon_kadr33 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon33);
+		Image1 -> Canvas -> Draw(x_line33, y_line33, kadr);
+	}
+	if (line34 == true)
+	{
+		pr_fon34 = Bounds(x_line34, y_line34, w, h);
+		fon_kadr34 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon34);
+		Image1 -> Canvas -> Draw(x_line34, y_line34, kadr2);
+	}
+	else
+	{
+	 pr_fon34 = Bounds(x_line34, y_line34, w, h);
+		fon_kadr34 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon34);
+		Image1 -> Canvas -> Draw(x_line34, y_line34, kadr);
+	}
+	if (line35 == true)
+	{
+		pr_fon35 = Bounds(x_line35, y_line35, w, h);
+		fon_kadr35 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon35);
+		Image1 -> Canvas -> Draw(x_line35, y_line35, kadr2);
+	}
+	else
+	{
+	 pr_fon35 = Bounds(x_line35, y_line35, w, h);
+		fon_kadr35 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon35);
+		Image1 -> Canvas -> Draw(x_line35, y_line35, kadr);
+	}
+	if (line36 == true)
+	{
+		pr_fon36 = Bounds(x_line36, y_line36, w, h);
+		fon_kadr36 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon36);
+		Image1 -> Canvas -> Draw(x_line36, y_line36, kadr2);
+	}
+	else
+	{
+	pr_fon36 = Bounds(x_line36, y_line36, w, h);
+		fon_kadr36 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon36);
+		Image1 -> Canvas -> Draw(x_line36, y_line36, kadr);
+	}
+	if (line37 == true)
+	{
+		pr_fon37 = Bounds(x_line37, y_line37, w, h);
+		fon_kadr37 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon37);
+		Image1 -> Canvas -> Draw(x_line37, y_line37, kadr2);
+	}
+	else
+	{
+	 pr_fon37 = Bounds(x_line37, y_line37, w, h);
+		fon_kadr37 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon37);
+		Image1 -> Canvas -> Draw(x_line37, y_line37, kadr);
+	}
+	if (line38 == true)
+	{
+		pr_fon38 = Bounds(x_line8, y_line38, w, h);
+		fon_kadr38 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon38);
+		Image1 -> Canvas -> Draw(x_line38, y_line38, kadr2);
+	}
+	else
+	{
+	 pr_fon38 = Bounds(x_line8, y_line38, w, h);
+		fon_kadr38 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon38);
+		Image1 -> Canvas -> Draw(x_line38, y_line38, kadr);
+	}
+	if (line39 == true)
+	{
+		pr_fon39 = Bounds(x_line39, y_line39, w, h);
+		fon_kadr39 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon39);
+		Image1 -> Canvas -> Draw(x_line39, y_line39, kadr2);
+	}
+	else
+	{
+	 pr_fon39 = Bounds(x_line39, y_line39, w, h);
+		fon_kadr39 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon39);
+		Image1 -> Canvas -> Draw(x_line39, y_line39, kadr);
+	}
+	if (line40 == true)
+	{
+		pr_fon40 = Bounds(x_line40, y_line40, w, h);
+		fon_kadr40 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon40);
+		Image1 -> Canvas -> Draw(x_line40, y_line40, kadr2);
+	}
+	else
+	{
+	 pr_fon40 = Bounds(x_line40, y_line40, w, h);
+		fon_kadr40 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon40);
+		Image1 -> Canvas -> Draw(x_line40, y_line40, kadr);
+	}
+	if (line41 == true)
+	{
+		pr_fon41 = Bounds(x_line41, y_line41, w, h);
+		fon_kadr41 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon41);
+		Image1 -> Canvas -> Draw(x_line41, y_line41, kadr2);
+	}
+	else
+	{
+	 pr_fon41 = Bounds(x_line41, y_line41, w, h);
+		fon_kadr41 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon41);
+		Image1 -> Canvas -> Draw(x_line41, y_line41, kadr);
+	}
+	if (line42 == true)
+	{
+		pr_fon42 = Bounds(x_line42, y_line42, w, h);
+		fon_kadr42 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon42);
+		Image1 -> Canvas -> Draw(x_line42, y_line42, kadr2);
+	}
+	else
+	{
+	 pr_fon42 = Bounds(x_line42, y_line42, w, h);
+		fon_kadr42 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon42);
+		Image1 -> Canvas -> Draw(x_line42, y_line42, kadr);
+	}
+	if (line43 == true)
+	{
+		pr_fon43 = Bounds(x_line43, y_line43, w, h);
+		fon_kadr43 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon43);
+		Image1 -> Canvas -> Draw(x_line43, y_line43, kadr2);
+	}
+	else
+	{
+	 pr_fon43 = Bounds(x_line43, y_line43, w, h);
+		fon_kadr43 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon43);
+		Image1 -> Canvas -> Draw(x_line43, y_line43, kadr);
+	}
+	if (line44 == true)
+	{
+		pr_fon44 = Bounds(x_line44, y_line44, w, h);
+		fon_kadr44 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon44);
+		Image1 -> Canvas -> Draw(x_line44, y_line44, kadr2);
+	}
+	else
+	{
+	 pr_fon44 = Bounds(x_line44, y_line44, w, h);
+		fon_kadr44 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon44);
+		Image1 -> Canvas -> Draw(x_line44, y_line44, kadr);
+	}
+	if (line45 == true)
+	{
+		pr_fon45 = Bounds(x_line45, y_line45, w, h);
+		fon_kadr45 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon45);
+		Image1 -> Canvas -> Draw(x_line45, y_line45, kadr2);
+	}
+	else
+	{
+	 pr_fon45 = Bounds(x_line45, y_line45, w, h);
+		fon_kadr45 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon45);
+		Image1 -> Canvas -> Draw(x_line45, y_line45, kadr);
+	}
+	if (line46 == true)
+	{
+		pr_fon46 = Bounds(x_line46, y_line46, w, h);
+		fon_kadr46 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon46);
+		Image1 -> Canvas -> Draw(x_line46, y_line46, kadr2);
+	}
+	else
+	{
+	 pr_fon46 = Bounds(x_line46, y_line46, w, h);
+		fon_kadr46 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon46);
+		Image1 -> Canvas -> Draw(x_line46, y_line46, kadr);
+	}
+	if (line47 == true)
+	{
+		pr_fon47 = Bounds(x_line47, y_line47, w, h);
+		fon_kadr47 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon47);
+		Image1 -> Canvas -> Draw(x_line47, y_line47, kadr2);
+	}
+	else
+	{
+	 pr_fon47 = Bounds(x_line47, y_line47, w, h);
+		fon_kadr47 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon47);
+		Image1 -> Canvas -> Draw(x_line47, y_line47, kadr);
+	}
+	if (line48 == true)
+	{
+		pr_fon48 = Bounds(x_line48, y_line48, w, h);
+		fon_kadr48 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon48);
+		Image1 -> Canvas -> Draw(x_line48, y_line48, kadr2);
+	}
+	else
+	{
+	 pr_fon48 = Bounds(x_line48, y_line48, w, h);
+		fon_kadr48 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon48);
+		Image1 -> Canvas -> Draw(x_line48, y_line48, kadr);
+	}
+	if (line49 == true)
+	{
+		pr_fon49 = Bounds(x_line49, y_line49, w, h);
+		fon_kadr49 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon49);
+		Image1 -> Canvas -> Draw(x_line49, y_line49, kadr2);
+	}
+	else
+	{
+	 pr_fon49 = Bounds(x_line49, y_line49, w, h);
+		fon_kadr49 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon49);
+		Image1 -> Canvas -> Draw(x_line49, y_line49, kadr);
+	}
+	if (line50 == true)
+	{
+		pr_fon50 = Bounds(x_line50, y_line50, w, h);
+		fon_kadr50 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon50);
+		Image1 -> Canvas -> Draw(x_line50, y_line50, kadr2);
+	}
+	else
+	{
+	 pr_fon50 = Bounds(x_line50, y_line50, w, h);
+		fon_kadr50 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon50);
+		Image1 -> Canvas -> Draw(x_line50, y_line50, kadr);
+	}
+	if (line51 == true)
+	{
+		pr_fon51 = Bounds(x_line51, y_line51, w, h);
+		fon_kadr51 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon51);
+		Image1 -> Canvas -> Draw(x_line51, y_line51, kadr2);
+	}
+	else
+	{
+	 pr_fon51 = Bounds(x_line51, y_line51, w, h);
+		fon_kadr51 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon51);
+		Image1 -> Canvas -> Draw(x_line51, y_line51, kadr);
+	}
+	if (line52 == true)
+	{
+		pr_fon52 = Bounds(x_line52, y_line52, w, h);
+		fon_kadr52 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon52);
+		Image1 -> Canvas -> Draw(x_line52, y_line52, kadr2);
+	}
+	else
+	{
+	 pr_fon52 = Bounds(x_line52, y_line52, w, h);
+		fon_kadr52 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon52);
+		Image1 -> Canvas -> Draw(x_line52, y_line52, kadr);
+	}
+	if (line53 == true)
+	{
+		pr_fon53 = Bounds(x_line53, y_line53, w, h);
+		fon_kadr53 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon53);
+		Image1 -> Canvas -> Draw(x_line53, y_line53, kadr2);
+	}
+	else
+	{
+	 pr_fon53 = Bounds(x_line53, y_line53, w, h);
+		fon_kadr53 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon53);
+		Image1 -> Canvas -> Draw(x_line53, y_line53, kadr);
+	}
+	if (line54 == true)
+	{
+		pr_fon54 = Bounds(x_line54, y_line54, w, h);
+		fon_kadr54 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon54);
+		Image1 -> Canvas -> Draw(x_line54, y_line54, kadr2);
+	}
+	else
+	{
+	 pr_fon54 = Bounds(x_line54, y_line54, w, h);
+		fon_kadr54 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon54);
+		Image1 -> Canvas -> Draw(x_line54, y_line54, kadr2);
+	}
+	if (line55 == true)
+	{
+		pr_fon55 = Bounds(x_line55, y_line55, w, h);
+		fon_kadr55 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon55);
+		Image1 -> Canvas -> Draw(x_line55, y_line55, kadr2);
+	}
+	else
+	{
+	 pr_fon55 = Bounds(x_line55, y_line55, w, h);
+		fon_kadr55 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon55);
+		Image1 -> Canvas -> Draw(x_line55, y_line55, kadr);
+	}
+	if (line56 == true)
+	{
+		pr_fon56 = Bounds(x_line56, y_line65, w, h);
+		fon_kadr56 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon56);
+		Image1 -> Canvas -> Draw(x_line56, y_line56, kadr2);
+	}
+	else
+	{
+	 pr_fon56 = Bounds(x_line56, y_line65, w, h);
+		fon_kadr56 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon56);
+		Image1 -> Canvas -> Draw(x_line56, y_line56, kadr);
+	}
+	if (line57 == true)
+	{
+		pr_fon57 = Bounds(x_line57, y_line57, w, h);
+		fon_kadr57 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon57);
+		Image1 -> Canvas -> Draw(x_line57, y_line57, kadr2);
+	}
+	else
+	{
+	 pr_fon57 = Bounds(x_line57, y_line57, w, h);
+		fon_kadr57 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon57);
+		Image1 -> Canvas -> Draw(x_line57, y_line57, kadr);
+	}
+	if (line58 == true)
+	{
+		pr_fon58 = Bounds(x_line58, y_line58, w, h);
+		fon_kadr58 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon58);
+		Image1 -> Canvas -> Draw(x_line58, y_line58, kadr2);
+	}
+	else
+	{
+	 pr_fon58 = Bounds(x_line58, y_line58, w, h);
+		fon_kadr58 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon58);
+		Image1 -> Canvas -> Draw(x_line58, y_line58, kadr);
+	}
+	if (line59 == true)
+	{
+		pr_fon59 = Bounds(x_line59, y_line59, w, h);
+		fon_kadr59 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon59);
+		Image1 -> Canvas -> Draw(x_line59, y_line59, kadr2);
+	}
+	else
+	{
+	 pr_fon59 = Bounds(x_line59, y_line59, w, h);
+		fon_kadr59 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon59);
+		Image1 -> Canvas -> Draw(x_line59, y_line59, kadr);
+	}
+	if (line60 == true)
+	{
+		pr_fon60 = Bounds(x_line60, y_line60, w, h);
+		fon_kadr60 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon60);
+		Image1 -> Canvas -> Draw(x_line60, y_line60, kadr2);
+	}
+	else
+	{
+	 pr_fon60 = Bounds(x_line60, y_line60, w, h);
+		fon_kadr60 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon60);
+		Image1 -> Canvas -> Draw(x_line60, y_line60, kadr);
+	}
+	if (line61 == true)
+	{
+		pr_fon61 = Bounds(x_line61, y_line61, w, h);
+		fon_kadr61 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon61);
+		Image1 -> Canvas -> Draw(x_line61, y_line61, kadr2);
+	}
+	else
+	{
+	 pr_fon61 = Bounds(x_line61, y_line61, w, h);
+		fon_kadr61 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon61);
+		Image1 -> Canvas -> Draw(x_line61, y_line61, kadr);
+	}
+	if (line62 == true)
+	{
+		pr_fon62 = Bounds(x_line62, y_line62, w, h);
+		fon_kadr62 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon62);
+		Image1 -> Canvas -> Draw(x_line62, y_line62, kadr2);
+	}
+	else
+	{
+	 pr_fon62 = Bounds(x_line62, y_line62, w, h);
+		fon_kadr62 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon62);
+		Image1 -> Canvas -> Draw(x_line62, y_line62, kadr);
+	}
+	if (line63 == true)
+	{
+		pr_fon63 = Bounds(x_line63, y_line63, w, h);
+		fon_kadr63 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon63);
+		Image1 -> Canvas -> Draw(x_line63, y_line63, kadr2);
+	}
+	else
+	{
+	 pr_fon63 = Bounds(x_line63, y_line63, w, h);
+		fon_kadr63 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon63);
+		Image1 -> Canvas -> Draw(x_line63, y_line63, kadr);
+	}
+	if (line64 == true)
+	{
+		pr_fon64 = Bounds(x_line64, y_line64, w, h);
+		fon_kadr64 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon64);
+		Image1 -> Canvas -> Draw(x_line64, y_line64, kadr2);
+	}
+	else
+	{
+	 pr_fon64 = Bounds(x_line64, y_line64, w, h);
+		fon_kadr64 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon64);
+		Image1 -> Canvas -> Draw(x_line64, y_line64, kadr);
+	}
+	if (line65 == true)
+	{
+		pr_fon65 = Bounds(x_line65, y_line65, w, h);
+		fon_kadr65 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon65);
+		Image1 -> Canvas -> Draw(x_line65, y_line65, kadr2);
+	}
+	else
+	{
+	 pr_fon65 = Bounds(x_line65, y_line65, w, h);
+		fon_kadr65 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon65);
+		Image1 -> Canvas -> Draw(x_line65, y_line65, kadr);
+	}
+	if (line66 == true)
+	{
+		pr_fon66 = Bounds(x_line66, y_line66, w, h);
+		fon_kadr66 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon66);
+		Image1 -> Canvas -> Draw(x_line66, y_line66, kadr2);
+	}
+	else
+	{
+	 pr_fon66 = Bounds(x_line66, y_line66, w, h);
+		fon_kadr66 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon66);
+		Image1 -> Canvas -> Draw(x_line66, y_line66, kadr);
+	}
+	if (line67 == true)
+	{
+		pr_fon67 = Bounds(x_line67, y_line67, w, h);
+		fon_kadr67 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon67);
+		Image1 -> Canvas -> Draw(x_line67, y_line67, kadr2);
+	}
+	else
+	{
+	 pr_fon67 = Bounds(x_line67, y_line67, w, h);
+		fon_kadr67 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon67);
+		Image1 -> Canvas -> Draw(x_line67, y_line67, kadr);
+	}
+	if (line68 == true)
+	{
+		pr_fon68 = Bounds(x_line68, y_line68, w, h);
+		fon_kadr68 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon68);
+		Image1 -> Canvas -> Draw(x_line68, y_line68, kadr2);
+	}
+	else
+	{
+	 pr_fon68 = Bounds(x_line68, y_line68, w, h);
+		fon_kadr68 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon68);
+		Image1 -> Canvas -> Draw(x_line68, y_line68, kadr);
+	}
+	if (line69 == true)
+	{
+		pr_fon69 = Bounds(x_line69, y_line69, w, h);
+		fon_kadr69 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon69);
+		Image1 -> Canvas -> Draw(x_line9, y_line69, kadr2);
+
+	}
+	else
+	{
+		pr_fon69 = Bounds(x_line69, y_line69, w, h);
+		fon_kadr69 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon69);
+		Image1 -> Canvas -> Draw(x_line9, y_line69, kadr);
+	}
+	if (line70 == true)
+	{
+		pr_fon70 = Bounds(x_line70, y_line70, w, h);
+		fon_kadr70 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon70);
+		Image1 -> Canvas -> Draw(x_line70, y_line70, kadr2);
+	}
+	else
+	{
+	 pr_fon70 = Bounds(x_line70, y_line70, w, h);
+		fon_kadr70 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon70);
+		Image1 -> Canvas -> Draw(x_line70, y_line70, kadr);
+	}
+	if (line71 == true)
+	{
+		pr_fon71 = Bounds(x_line71, y_line71, w, h);
+		fon_kadr71 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon71);
+		Image1 -> Canvas -> Draw(x_line71, y_line71, kadr2);
+	}
+	else
+	{
+	 pr_fon71 = Bounds(x_line71, y_line71, w, h);
+		fon_kadr71 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon71);
+		Image1 -> Canvas -> Draw(x_line71, y_line71, kadr);
+	}
+	if (line72 == true)
+	{
+		pr_fon72 = Bounds(x_line72, y_line72, w, h);
+		fon_kadr72 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon72);
+		Image1 -> Canvas -> Draw(x_line72, y_line72, kadr2);
+	}
+	else
+	{
+	 pr_fon72 = Bounds(x_line72, y_line72, w, h);
+		fon_kadr72 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon72);
+		Image1 -> Canvas -> Draw(x_line72, y_line72, kadr);
+	}
+	if (line73 == true)
+	{
+		pr_fon73 = Bounds(x_line73, y_line73, w, h);
+		fon_kadr73 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon73);
+		Image1 -> Canvas -> Draw(x_line73, y_line3, kadr2);
+	}
+	else
+	{
+	 pr_fon73 = Bounds(x_line73, y_line73, w, h);
+		fon_kadr73 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon73);
+		Image1 -> Canvas -> Draw(x_line73, y_line3, kadr);
+	}
+	if (line74 == true)
+	{
+		pr_fon74 = Bounds(x_line74, y_line74, w, h);
+		fon_kadr74 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon74);
+		Image1 -> Canvas -> Draw(x_line74, y_line74, kadr2);
+	}
+	else
+	{
+	 pr_fon74 = Bounds(x_line74, y_line74, w, h);
+		fon_kadr74 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon74);
+		Image1 -> Canvas -> Draw(x_line74, y_line74, kadr);
+	}
+	if (line75 == true)
+	{
+		pr_fon75 = Bounds(x_line75, y_line75, w, h);
+		fon_kadr75 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon75);
+		Image1 -> Canvas -> Draw(x_line75, y_line75, kadr2);
+	}
+	else
+	{
+	 pr_fon75 = Bounds(x_line75, y_line75, w, h);
+		fon_kadr75 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon75);
+		Image1 -> Canvas -> Draw(x_line75, y_line75, kadr);
+	}
+	if (line76 == true)
+	{
+		pr_fon76 = Bounds(x_line76, y_line76, w, h);
+		fon_kadr76 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon76);
+		Image1 -> Canvas -> Draw(x_line76, y_line76, kadr2);
+	}
+	else
+	{
+	 pr_fon76 = Bounds(x_line76, y_line76, w, h);
+		fon_kadr76 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon76);
+		Image1 -> Canvas -> Draw(x_line76, y_line76, kadr);
+	}
+	if (line77 == true)
+	{
+		pr_fon77 = Bounds(x_line77, y_line77, w, h);
+		fon_kadr77 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon77);
+		Image1 -> Canvas -> Draw(x_line77, y_line77, kadr2);
+	}
+	else
+	{
+	 pr_fon77 = Bounds(x_line77, y_line77, w, h);
+		fon_kadr77 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon77);
+		Image1 -> Canvas -> Draw(x_line77, y_line77, kadr);
+	}
+	if (line78 == true)
+	{
+		pr_fon78 = Bounds(x_line78, y_line78, w, h);
+		fon_kadr78 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon78);
+		Image1 -> Canvas -> Draw(x_line78, y_line78, kadr2);
+	}
+	else
+	{
+	 pr_fon78 = Bounds(x_line78, y_line78, w, h);
+		fon_kadr78 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon78);
+		Image1 -> Canvas -> Draw(x_line78, y_line78, kadr);
+	}
+	if (line79 == true)
+	{
+		pr_fon79 = Bounds(x_line79, y_line79, w, h);
+		fon_kadr79 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon79);
+		Image1 -> Canvas -> Draw(x_line79, y_line79, kadr2);
+	}
+	else
+	{
+	 pr_fon79 = Bounds(x_line79, y_line79, w, h);
+		fon_kadr79 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon79);
+		Image1 -> Canvas -> Draw(x_line79, y_line79, kadr);
+	}
+	if (line80 == true)
+	{
+		pr_fon80 = Bounds(x_line80, y_line80, w, h);
+		fon_kadr80 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon80);
+		Image1 -> Canvas -> Draw(x_line80, y_line80, kadr2);
+	}
+	else
+	{
+	 pr_fon80 = Bounds(x_line80, y_line80, w, h);
+		fon_kadr80 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon80);
+		Image1 -> Canvas -> Draw(x_line80, y_line80, kadr);
+	}
+	if (line81 == true)
+	{
+		pr_fon81 = Bounds(x_line81, y_line81, w, h);
+		fon_kadr81 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon81);
+		Image1 -> Canvas -> Draw(x_line81, y_line81, kadr2);
+	}
+	else
+	{
+	 pr_fon81 = Bounds(x_line81, y_line81, w, h);
+		fon_kadr81 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon81);
+		Image1 -> Canvas -> Draw(x_line81, y_line81, kadr);
+	}
+	if (line82 == true)
+	{
+		pr_fon82 = Bounds(x_line82, y_line82, w, h);
+		fon_kadr82 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon82);
+		Image1 -> Canvas -> Draw(x_line82, y_line82, kadr2);
+	}
+	else
+	{
+	 pr_fon82 = Bounds(x_line82, y_line82, w, h);
+		fon_kadr82 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon82);
+		Image1 -> Canvas -> Draw(x_line82, y_line82, kadr);
+	}
+	if (line83 == true)
+	{
+		pr_fon83 = Bounds(x_line83, y_line83, w, h);
+		fon_kadr83 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon83);
+		Image1 -> Canvas -> Draw(x_line83, y_line83, kadr2);
+	}
+	else
+	{
+		pr_fon83 = Bounds(x_line83, y_line83, w, h);
+		fon_kadr83 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon83);
+		Image1 -> Canvas -> Draw(x_line83, y_line83, kadr);
+	}
+	if (line84 == true)
+	{
+		pr_fon84 = Bounds(x_line84, y_line84, w, h);
+		fon_kadr84 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon84);
+		Image1 -> Canvas -> Draw(x_line84, y_line84, kadr2);
+	}
+	else
+	{
+	 pr_fon84 = Bounds(x_line84, y_line84, w, h);
+		fon_kadr84 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon84);
+		Image1 -> Canvas -> Draw(x_line84, y_line84, kadr);
+	}
+	if (line85 == true)
+	{
+		pr_fon85 = Bounds(x_line85, y_line85, w, h);
+		fon_kadr85 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon85);
+		Image1 -> Canvas -> Draw(x_line85, y_line85, kadr2);
+	}
+	else
+	{
+	 pr_fon85 = Bounds(x_line85, y_line85, w, h);
+		fon_kadr85 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon85);
+		Image1 -> Canvas -> Draw(x_line85, y_line85, kadr);
+	}
+	if (line86 == true)
+	{
+		pr_fon86 = Bounds(x_line86, y_line86, w, h);
+		fon_kadr86 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon86);
+		Image1 -> Canvas -> Draw(x_line86, y_line86, kadr2);
+	}
+	else
+	{
+	pr_fon86 = Bounds(x_line86, y_line86, w, h);
+		fon_kadr86 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon86);
+		Image1 -> Canvas -> Draw(x_line86, y_line86, kadr);
+	}
+	if (line87 == true)
+	{
+		pr_fon87 = Bounds(x_line87, y_line87, w, h);
+		fon_kadr87 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon87);
+		Image1 -> Canvas -> Draw(x_line87, y_line87, kadr2);
+	}
+	else
+	{
+	 pr_fon87 = Bounds(x_line87, y_line87, w, h);
+		fon_kadr87 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon87);
+		Image1 -> Canvas -> Draw(x_line87, y_line87, kadr);
+	}
+	if (line88 == true)
+	{
+		pr_fon88 = Bounds(x_line88, y_line88, w, h);
+		fon_kadr88 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon88);
+		Image1 -> Canvas -> Draw(x_line88, y_line88, kadr2);
+	}
+	else
+	{
+	 pr_fon88 = Bounds(x_line88, y_line88, w, h);
+		fon_kadr88 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon88);
+		Image1 -> Canvas -> Draw(x_line88, y_line88, kadr);
+	}
+	if (line89 == true)
+	{
+		pr_fon89 = Bounds(x_line89, y_line89, w, h);
+		fon_kadr89 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon89);
+		Image1 -> Canvas -> Draw(x_line89, y_line89, kadr2);
+	}
+	else
+	{
+	 pr_fon89 = Bounds(x_line89, y_line89, w, h);
+		fon_kadr89 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon89);
+		Image1 -> Canvas -> Draw(x_line89, y_line89, kadr);
+	}
+	if (line90 == true)
+	{
+		pr_fon90 = Bounds(x_line90, y_line90, w, h);
+		fon_kadr90 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon90);
+		Image1 -> Canvas -> Draw(x_line90, y_line90, kadr2);
+	}
+	else
+	{
+	 	pr_fon90 = Bounds(x_line90, y_line90, w, h);
+		fon_kadr90 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon90);
+		Image1 -> Canvas -> Draw(x_line90, y_line90, kadr);
+	}
+	if (line91 == true)
+	{
+		pr_fon91 = Bounds(x_line91, y_line91, w, h);
+		fon_kadr91 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon91);
+		Image1 -> Canvas -> Draw(x_line91, y_line91, kadr2);
+	}
+	else
+	{
+	 pr_fon91 = Bounds(x_line91, y_line91, w, h);
+		fon_kadr91 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon91);
+		Image1 -> Canvas -> Draw(x_line91, y_line91, kadr);
+	}
+	if (line92 == true)
+	{
+		pr_fon92 = Bounds(x_line92, y_line92, w, h);
+		fon_kadr92 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon92);
+		Image1 -> Canvas -> Draw(x_line92, y_line92, kadr2);
+	}
+	else
+	{
+	 pr_fon92 = Bounds(x_line92, y_line92, w, h);
+		fon_kadr92 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon92);
+		Image1 -> Canvas -> Draw(x_line92, y_line92, kadr);
+	}
+	if (line93 == true)
+	{
+		pr_fon93 = Bounds(x_line93, y_line93, w, h);
+		fon_kadr93 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon93);
+		Image1 -> Canvas -> Draw(x_line93, y_line93, kadr2);
+	}
+	else
+	{
+	 pr_fon93 = Bounds(x_line93, y_line93, w, h);
+		fon_kadr93 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon93);
+		Image1 -> Canvas -> Draw(x_line93, y_line93, kadr);
+	}
+	if (line94 == true)
+	{
+		pr_fon94 = Bounds(x_line94, y_line94, w, h);
+		fon_kadr94 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon94);
+		Image1 -> Canvas -> Draw(x_line94, y_line94, kadr2);
+	}
+	else
+	{
+	 pr_fon94 = Bounds(x_line94, y_line94, w, h);
+		fon_kadr94 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon94);
+		Image1 -> Canvas -> Draw(x_line94, y_line94, kadr);
+	}
+	if (line95 == true)
+	{
+		pr_fon95 = Bounds(x_line95, y_line95, w, h);
+		fon_kadr95 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon95);
+		Image1 -> Canvas -> Draw(x_line95, y_line95, kadr2);
+	}
+	else
+	{
+	 pr_fon95 = Bounds(x_line95, y_line95, w, h);
+		fon_kadr95 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon95);
+		Image1 -> Canvas -> Draw(x_line95, y_line95, kadr);
+	}
+	if (line96 == true)
+	{
+		pr_fon96 = Bounds(x_line96, y_line96, w, h);
+		fon_kadr96 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon96);
+		Image1 -> Canvas -> Draw(x_line96, y_line96, kadr2);
+	}
+	else
+	{
+	 pr_fon96 = Bounds(x_line96, y_line96, w, h);
+		fon_kadr96 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon96);
+		Image1 -> Canvas -> Draw(x_line96, y_line96, kadr);
+	}
+	if (line97 == true)
+	{
+		pr_fon97 = Bounds(x_line97, y_line97, w, h);
+		fon_kadr97 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon97);
+		Image1 -> Canvas -> Draw(x_line97, y_line97, kadr2);
+	}
+	else
+	{
+	pr_fon97 = Bounds(x_line97, y_line97, w, h);
+		fon_kadr97 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon97);
+		Image1 -> Canvas -> Draw(x_line97, y_line97, kadr);
+	}
+	if (line98 == true)
+	{
+		pr_fon98 = Bounds(x_line98, y_line98, w, h);
+		fon_kadr98 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon98);
+		Image1 -> Canvas -> Draw(x_line98, y_line98, kadr2);
+	}
+	else
+	{
+	 pr_fon98 = Bounds(x_line98, y_line98, w, h);
+		fon_kadr98 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon98);
+		Image1 -> Canvas -> Draw(x_line98, y_line98, kadr);
+	}
+	if (line99 == true)
+	{
+		pr_fon99 = Bounds(x_line99, y_line99, w, h);
+		fon_kadr99 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon99);
+		Image1 -> Canvas -> Draw(x_line99, y_line99, kadr2);
+	}
+	else
+	{
+	 pr_fon99 = Bounds(x_line99, y_line99, w, h);
+		fon_kadr99 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon99);
+		Image1 -> Canvas -> Draw(x_line99, y_line99, kadr);
+	}
+	if (line100 == true)
+	{
+		pr_fon100 = Bounds(x_line100, y_line100, w, h);
+		fon_kadr100 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon100);
+		Image1 -> Canvas -> Draw(x_line100, y_line100, kadr2);
+	}
+	else
+	{
+	 pr_fon100 = Bounds(x_line100, y_line100, w, h);
+		fon_kadr100 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon100);
+		Image1 -> Canvas -> Draw(x_line100, y_line100, kadr);
+	}
+	if (line101 == true)
+	{
+		pr_fon101 = Bounds(x_line101, y_line101, w, h);
+		fon_kadr101 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon101);
+		Image1 -> Canvas -> Draw(x_line101, y_line101, kadr2);
+	}
+	else
+	{
+	 pr_fon101 = Bounds(x_line101, y_line101, w, h);
+		fon_kadr101 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon101);
+		Image1 -> Canvas -> Draw(x_line101, y_line101, kadr);
+	}
+	if (line102 == true)
+	{
+		pr_fon102 = Bounds(x_line102, y_line102, w, h);
+		fon_kadr102 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon102);
+		Image1 -> Canvas -> Draw(x_line102, y_line102, kadr2);
+	}
+	else
+	{
+	pr_fon102 = Bounds(x_line102, y_line102, w, h);
+		fon_kadr102 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon102);
+		Image1 -> Canvas -> Draw(x_line102, y_line102, kadr);
+	}
+	if (line103 == true)
+	{
+		pr_fon103 = Bounds(x_line103, y_line103, w, h);
+		fon_kadr103 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon103);
+		Image1 -> Canvas -> Draw(x_line103, y_line103, kadr2);
+	}
+	else
+	{
+	 pr_fon103 = Bounds(x_line103, y_line103, w, h);
+		fon_kadr103 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon103);
+		Image1 -> Canvas -> Draw(x_line103, y_line103, kadr);
+	}
+	if (line104 == true)
+	{
+		pr_fon104 = Bounds(x_line104, y_line104, w, h);
+		fon_kadr104 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon104);
+		Image1 -> Canvas -> Draw(x_line104, y_line104, kadr2);
+	}
+	else
+	{
+	 pr_fon104 = Bounds(x_line104, y_line104, w, h);
+		fon_kadr104 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon104);
+		Image1 -> Canvas -> Draw(x_line104, y_line104, kadr2);
+	}
+	if (line105 == true)
+	{
+		pr_fon105 = Bounds(x_line105, y_line105, w, h);
+		fon_kadr105 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon105);
+		Image1 -> Canvas -> Draw(x_line105, y_line105, kadr2);
+	}
+	else
+	{
+	 pr_fon105 = Bounds(x_line105, y_line105, w, h);
+		fon_kadr105 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon105);
+		Image1 -> Canvas -> Draw(x_line105, y_line105, kadr2);
+	}
+	if (line106 == true)
+	{
+		pr_fon106 = Bounds(x_line106, y_line106, w, h);
+		fon_kadr106 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon106);
+		Image1 -> Canvas -> Draw(x_line106, y_line106, kadr2);
+	}
+	else
+	{
+	 pr_fon106 = Bounds(x_line106, y_line106, w, h);
+		fon_kadr106 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon106);
+		Image1 -> Canvas -> Draw(x_line106, y_line106, kadr);
+	}
+	if (line107 == true)
+	{
+		pr_fon107 = Bounds(x_line107, y_line107, w, h);
+		fon_kadr107 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon107);
+		Image1 -> Canvas -> Draw(x_line107, y_line107, kadr2);
+	}
+	else
+	{
+	 pr_fon107 = Bounds(x_line107, y_line107, w, h);
+		fon_kadr107 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon107);
+		Image1 -> Canvas -> Draw(x_line107, y_line107, kadr);
+	}
+	if (line108 == true)
+	{
+		pr_fon108 = Bounds(x_line108, y_line108, w, h);
+		fon_kadr108 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon108);
+		Image1 -> Canvas -> Draw(x_line108, y_line108, kadr2);
+	}
+	else
+	{
+	 pr_fon108 = Bounds(x_line108, y_line108, w, h);
+		fon_kadr108 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon108);
+		Image1 -> Canvas -> Draw(x_line108, y_line108, kadr);
+	}
+	if (line109 == true)
+	{
+		pr_fon109 = Bounds(x_line109, y_line109, w, h);
+		fon_kadr109 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon109);
+		Image1 -> Canvas -> Draw(x_line109, y_line109, kadr2);
+	}
+	else
+	{
+	 pr_fon109 = Bounds(x_line109, y_line109, w, h);
+		fon_kadr109 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon109);
+		Image1 -> Canvas -> Draw(x_line109, y_line109, kadr);
+	}
+	if (line110 == true)
+	{
+		pr_fon110 = Bounds(x_line110, y_line110, w, h);
+		fon_kadr110 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon110);
+		Image1 -> Canvas -> Draw(x_line110, y_line110, kadr2);
+	}
+	else
+	{
+	pr_fon110 = Bounds(x_line110, y_line110, w, h);
+		fon_kadr110 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon110);
+		Image1 -> Canvas -> Draw(x_line110, y_line110, kadr);
+	}
+	if (line111 == true)
+	{
+		pr_fon111 = Bounds(x_line111, y_line111, w, h);
+		fon_kadr111 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon111);
+		Image1 -> Canvas -> Draw(x_line111, y_line111, kadr2);
+	}
+	else
+	{
+	 pr_fon111 = Bounds(x_line111, y_line111, w, h);
+		fon_kadr111 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon111);
+		Image1 -> Canvas -> Draw(x_line111, y_line111, kadr);
+	}
+	if (line112 == true)
+	{
+		pr_fon112 = Bounds(x_line112, y_line112, w, h);
+		fon_kadr112 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon112);
+		Image1 -> Canvas -> Draw(x_line112, y_line112, kadr2);
+	}
+	else
+	{
+	 pr_fon112 = Bounds(x_line112, y_line112, w, h);
+		fon_kadr112 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon112);
+		Image1 -> Canvas -> Draw(x_line112, y_line112, kadr);
+	}
+	if (line113 == true)
+	{
+		pr_fon113 = Bounds(x_line113, y_line113, w, h);
+		fon_kadr113 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon113);
+		Image1 -> Canvas -> Draw(x_line113, y_line113, kadr2);
+	}
+	else
+	{
+	 pr_fon113 = Bounds(x_line113, y_line113, w, h);
+		fon_kadr113 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon113);
+		Image1 -> Canvas -> Draw(x_line113, y_line113, kadr);
+	}
+	if (line114 == true)
+	{
+		pr_fon114 = Bounds(x_line114, y_line114, w, h);
+		fon_kadr114 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon114);
+		Image1 -> Canvas -> Draw(x_line114, y_line114, kadr2);
+	}
+	else
+	{
+	 pr_fon114 = Bounds(x_line114, y_line114, w, h);
+		fon_kadr114 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon114);
+		Image1 -> Canvas -> Draw(x_line114, y_line114, kadr);
+	}
+	if (line115 == true)
+	{
+		pr_fon115 = Bounds(x_line115, y_line115, w, h);
+		fon_kadr115 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon115);
+		Image1 -> Canvas -> Draw(x_line115, y_line115, kadr2);
+	}
+	else
+	{
+	 pr_fon115 = Bounds(x_line115, y_line115, w, h);
+		fon_kadr115 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon115);
+		Image1 -> Canvas -> Draw(x_line115, y_line115, kadr);
+	}
+	if (line116 == true)
+	{
+		pr_fon116 = Bounds(x_line116, y_line116, w, h);
+		fon_kadr116 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon116);
+		Image1 -> Canvas -> Draw(x_line116, y_line116, kadr2);
+	}
+	else
+	{
+	 pr_fon116 = Bounds(x_line116, y_line116, w, h);
+		fon_kadr116 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon116);
+		Image1 -> Canvas -> Draw(x_line116, y_line116, kadr);
+	}
+	if (line117 == true)
+	{
+		pr_fon117 = Bounds(x_line117, y_line117, w, h);
+		fon_kadr117 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon117);
+		Image1 -> Canvas -> Draw(x_line117, y_line117, kadr2);
+	}
+	else
+	{
+	 pr_fon117 = Bounds(x_line117, y_line117, w, h);
+		fon_kadr117 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon117);
+		Image1 -> Canvas -> Draw(x_line117, y_line117, kadr);
+	}
+	if (line118 == true)
+	{
+		pr_fon118 = Bounds(x_line118, y_line118, w, h);
+		fon_kadr118 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon118);
+		Image1 -> Canvas -> Draw(x_line118, y_line118, kadr2);
+	}
+	else
+	{
+	 pr_fon118 = Bounds(x_line118, y_line118, w, h);
+		fon_kadr118 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon118);
+		Image1 -> Canvas -> Draw(x_line118, y_line118, kadr);
+	}
+	if (line119 == true)
+	{
+		pr_fon119 = Bounds(x_line119, y_line119, w, h);
+		fon_kadr119 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon119);
+		Image1 -> Canvas -> Draw(x_line119, y_line119, kadr2);
+	}
+	else
+	{
+	 pr_fon119 = Bounds(x_line119, y_line119, w, h);
+		fon_kadr119 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon119);
+		Image1 -> Canvas -> Draw(x_line119, y_line119, kadr);
+	}
+	if (line120 == true)
+	{
+		pr_fon120 = Bounds(x_line120, y_line120, w, h);
+		fon_kadr120 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon120);
+		Image1 -> Canvas -> Draw(x_line120, y_line120, kadr2);
+	}
+	else
+	{
+	 pr_fon120 = Bounds(x_line120, y_line120, w, h);
+		fon_kadr120 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon120);
+		Image1 -> Canvas -> Draw(x_line120, y_line120, kadr);
+	}
+	if (line121 == true)
+	{
+		pr_fon121 = Bounds(x_line121, y_line121, w, h);
+		fon_kadr121 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon121);
+		Image1 -> Canvas -> Draw(x_line121, y_line121, kadr2);
+	}
+	else
+	{
+	 pr_fon121 = Bounds(x_line121, y_line121, w, h);
+		fon_kadr121 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon121);
+		Image1 -> Canvas -> Draw(x_line121, y_line121, kadr);
+	}
+	if (line122 == true)
+	{
+		pr_fon122 = Bounds(x_line122, y_line122, w, h);
+		fon_kadr122 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon122);
+		Image1 -> Canvas -> Draw(x_line122, y_line122, kadr2);
+	}
+	else
+	{
+	 pr_fon122 = Bounds(x_line122, y_line122, w, h);
+		fon_kadr122 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon122);
+		Image1 -> Canvas -> Draw(x_line122, y_line122, kadr);
+	}
+	if (line123 == true)
+	{
+		pr_fon123 = Bounds(x_line123, y_line123, w, h);
+		fon_kadr123 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon123);
+		Image1 -> Canvas -> Draw(x_line123, y_line123, kadr2);
+	}
+	else
+	{
+	pr_fon123 = Bounds(x_line123, y_line123, w, h);
+		fon_kadr123 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon123);
+		Image1 -> Canvas -> Draw(x_line123, y_line123, kadr);
+	}
+	if (line124 == true)
+	{
+		pr_fon124 = Bounds(x_line124, y_line124, w, h);
+		fon_kadr124 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon124);
+		Image1 -> Canvas -> Draw(x_line124, y_line124, kadr2);
+	}
+	else
+	{
+	 pr_fon124 = Bounds(x_line124, y_line124, w, h);
+		fon_kadr124 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon124);
+		Image1 -> Canvas -> Draw(x_line124, y_line124, kadr);
+	}
+	if (line125 == true)
+	{
+		pr_fon125 = Bounds(x_line125, y_line125, w, h);
+		fon_kadr125 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon125);
+		Image1 -> Canvas -> Draw(x_line125, y_line125, kadr2);
+	}
+	else
+	{
+	 pr_fon125 = Bounds(x_line125, y_line125, w, h);
+		fon_kadr125 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon125);
+		Image1 -> Canvas -> Draw(x_line125, y_line125, kadr);
+	}
+	if (line126 == true)
+	{
+		pr_fon126 = Bounds(x_line126, y_line126, w, h);
+		fon_kadr126 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon126);
+		Image1 -> Canvas -> Draw(x_line126, y_line126, kadr2);
+	}
+	else
+	{
+	 pr_fon126 = Bounds(x_line126, y_line126, w, h);
+		fon_kadr126 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon126);
+		Image1 -> Canvas -> Draw(x_line126, y_line126, kadr);
+	}
+	if (line127 == true)
+	{
+		pr_fon127 = Bounds(x_line127, y_line127, w, h);
+		fon_kadr127 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon127);
+		Image1 -> Canvas -> Draw(x_line127, y_line127, kadr2);
+	}
+	else
+	{
+	pr_fon127 = Bounds(x_line127, y_line127, w, h);
+		fon_kadr127 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon127);
+		Image1 -> Canvas -> Draw(x_line127, y_line127, kadr);
+	}
+	if (line128 == true)
+	{
+		pr_fon128 = Bounds(x_line128, y_line128, w, h);
+		fon_kadr128 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon128);
+		Image1 -> Canvas -> Draw(x_line128, y_line128, kadr2);
+	}
+	else
+	{
+	 pr_fon128 = Bounds(x_line128, y_line128, w, h);
+		fon_kadr128 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon128);
+		Image1 -> Canvas -> Draw(x_line128, y_line128, kadr);
+	}
+	if (line129 == true)
+	{
+		pr_fon129 = Bounds(x_line129, y_line129, w, h);
+		fon_kadr129 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon129);
+		Image1 -> Canvas -> Draw(x_line129, y_line129, kadr2);
+	}
+	else
+	{
+	 pr_fon129 = Bounds(x_line129, y_line129, w, h);
+		fon_kadr129 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon129);
+		Image1 -> Canvas -> Draw(x_line129, y_line129, kadr);
+	}
+	if (line130 == true)
+	{
+		pr_fon130 = Bounds(x_line130, y_line130, w, h);
+		fon_kadr130 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon130);
+		Image1 -> Canvas -> Draw(x_line130, y_line130, kadr2);
+	}
+	else
+	{
+	 pr_fon130 = Bounds(x_line130, y_line130, w, h);
+		fon_kadr130 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon130);
+		Image1 -> Canvas -> Draw(x_line130, y_line130, kadr);
+	}
+	if (line131 == true)
+	{
+		pr_fon131 = Bounds(x_line131, y_line131, w, h);
+		fon_kadr131 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon131);
+		Image1 -> Canvas -> Draw(x_line131, y_line131, kadr2);
+	}
+	else
+	{
+	pr_fon131 = Bounds(x_line131, y_line131, w, h);
+		fon_kadr131 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon131);
+		Image1 -> Canvas -> Draw(x_line131, y_line131, kadr);
+	}
+	if (line132 == true)
+	{
+		pr_fon132 = Bounds(x_line132, y_line132, w, h);
+		fon_kadr132 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon132);
+		Image1 -> Canvas -> Draw(x_line132, y_line132, kadr2);
+	}
+	else
+	{
+	 pr_fon132 = Bounds(x_line132, y_line132, w, h);
+		fon_kadr132 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon132);
+		Image1 -> Canvas -> Draw(x_line132, y_line132, kadr);
+	}
+	if (line133 == true)
+	{
+		pr_fon133 = Bounds(x_line133, y_line133, w, h);
+		fon_kadr133 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon133);
+		Image1 -> Canvas -> Draw(x_line133, y_line133, kadr2);
+	}
+	else
+	{
+	 pr_fon133 = Bounds(x_line133, y_line133, w, h);
+		fon_kadr133 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon133);
+		Image1 -> Canvas -> Draw(x_line133, y_line133, kadr);
+	}
+	if (line134 == true)
+	{
+		pr_fon134 = Bounds(x_line134, y_line134, w, h);
+		fon_kadr134 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon134);
+		Image1 -> Canvas -> Draw(x_line134, y_line134, kadr2);
+	}
+	else
+	{
+	 pr_fon134 = Bounds(x_line134, y_line134, w, h);
+		fon_kadr134 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon134);
+		Image1 -> Canvas -> Draw(x_line134, y_line134, kadr);
+	}
+	if (line135 == true)
+	{
+		pr_fon135 = Bounds(x_line135, y_line135, w, h);
+		fon_kadr135 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon135);
+		Image1 -> Canvas -> Draw(x_line135, y_line135, kadr2);
+	}
+	else
+	{
+	 pr_fon135 = Bounds(x_line135, y_line135, w, h);
+		fon_kadr135 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon135);
+		Image1 -> Canvas -> Draw(x_line135, y_line135, kadr);
+	}
+	if (line136 == true)
+	{
+		pr_fon136 = Bounds(x_line136, y_line136, w, h);
+		fon_kadr136 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon136);
+		Image1 -> Canvas -> Draw(x_line136, y_line136, kadr2);
+	}
+	else
+	{
+	 pr_fon136 = Bounds(x_line136, y_line136, w, h);
+		fon_kadr136 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon136);
+		Image1 -> Canvas -> Draw(x_line136, y_line136, kadr);
+	}
+	if (line137 == true)
+	{
+		pr_fon137 = Bounds(x_line137, y_line137, w, h);
+		fon_kadr137 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon137);
+		Image1 -> Canvas -> Draw(x_line137, y_line137, kadr2);
+	}
+	else
+	{
+	 pr_fon137 = Bounds(x_line137, y_line137, w, h);
+		fon_kadr137 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon137);
+		Image1 -> Canvas -> Draw(x_line137, y_line137, kadr);
+	}
+	if (line138 == true)
+	{
+		pr_fon138 = Bounds(x_line138, y_line138, w, h);
+		fon_kadr138 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon138);
+		Image1 -> Canvas -> Draw(x_line138, y_line138, kadr2);
+	}
+	else
+	{
+	 pr_fon138 = Bounds(x_line138, y_line138, w, h);
+		fon_kadr138 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon138);
+		Image1 -> Canvas -> Draw(x_line138, y_line138, kadr);
+	}
+	if (line139 == true)
+	{
+		pr_fon139 = Bounds(x_line139, y_line139, w, h);
+		fon_kadr139 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon139);
+		Image1 -> Canvas -> Draw(x_line139, y_line139, kadr2);
+	}
+	else
+	{
+	 pr_fon139 = Bounds(x_line139, y_line139, w, h);
+		fon_kadr139 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon139);
+		Image1 -> Canvas -> Draw(x_line139, y_line139, kadr);
+	}
+	if (line140 == true)
+	{
+		pr_fon140 = Bounds(x_line140, y_line140, w, h);
+		fon_kadr140 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon140);
+		Image1 -> Canvas -> Draw(x_line140, y_line140, kadr2);
+	}
+	else
+	{
+	pr_fon140 = Bounds(x_line140, y_line140, w, h);
+		fon_kadr140 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon140);
+		Image1 -> Canvas -> Draw(x_line140, y_line140, kadr);
+	}
+	if (line141 == true)
+	{
+		pr_fon141 = Bounds(x_line141, y_line141, w, h);
+		fon_kadr141 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon141);
+		Image1 -> Canvas -> Draw(x_line141, y_line141, kadr2);
+	}
+	else
+	{
+	 pr_fon141 = Bounds(x_line141, y_line141, w, h);
+		fon_kadr141 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon141);
+		Image1 -> Canvas -> Draw(x_line141, y_line141, kadr);
+	}
+	if (line142 == true)
+	{
+		pr_fon142 = Bounds(x_line142, y_line142, w, h);
+		fon_kadr142 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon142);
+		Image1 -> Canvas -> Draw(x_line142, y_line142, kadr2);
+	}
+	else
+	{
+	 pr_fon142 = Bounds(x_line142, y_line142, w, h);
+		fon_kadr142 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon142);
+		Image1 -> Canvas -> Draw(x_line142, y_line142, kadr);
+	}
+	if (line143 == true)
+	{
+		pr_fon143 = Bounds(x_line143, y_line143, w, h);
+		fon_kadr143 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon143);
+		Image1 -> Canvas -> Draw(x_line143, y_line143, kadr2);
+	}
+	else
+	{
+	 pr_fon143 = Bounds(x_line143, y_line143, w, h);
+		fon_kadr143 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon143);
+		Image1 -> Canvas -> Draw(x_line143, y_line143, kadr);
+	}
+	if (line144 == true)
+	{
+		pr_fon144 = Bounds(x_line144, y_line144, w, h);
+		fon_kadr144 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon144);
+		Image1 -> Canvas -> Draw(x_line144, y_line144, kadr2);
+	}
+	else
+	{
+	 pr_fon144 = Bounds(x_line144, y_line144, w, h);
+		fon_kadr144 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon144);
+		Image1 -> Canvas -> Draw(x_line144, y_line144, kadr2);
+	}
+	if (line145 == true)
+	{
+		pr_fon145 = Bounds(x_line145, y_line145, w, h);
+		fon_kadr145 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon145);
+		Image1 -> Canvas -> Draw(x_line145, y_line145, kadr2);
+	}
+	else
+	{
+	 pr_fon145 = Bounds(x_line145, y_line145, w, h);
+		fon_kadr145 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon145);
+		Image1 -> Canvas -> Draw(x_line145, y_line145, kadr2);
+	}
+	if (line146 == true)
+	{
+		pr_fon146 = Bounds(x_line146, y_line146, w, h);
+		fon_kadr146 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon146);
+		Image1 -> Canvas -> Draw(x_line146, y_line146, kadr2);
+	}
+	else
+	{
+	 pr_fon146 = Bounds(x_line146, y_line146, w, h);
+		fon_kadr146 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon146);
+		Image1 -> Canvas -> Draw(x_line146, y_line146, kadr);
+	}
+	if (line147 == true)
+	{
+		pr_fon147 = Bounds(x_line147, y_line147, w, h);
+		fon_kadr147 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon147);
+		Image1 -> Canvas -> Draw(x_line147, y_line147, kadr2);
+	}
+	else
+	{
+	 pr_fon147 = Bounds(x_line147, y_line147, w, h);
+		fon_kadr147 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon147);
+		Image1 -> Canvas -> Draw(x_line147, y_line147, kadr2);
+	}
+	if (line148 == true)
+	{
+		pr_fon148 = Bounds(x_line148, y_line148, w, h);
+		fon_kadr148 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon148);
+		Image1 -> Canvas -> Draw(x_line148, y_line148, kadr2);
+	}
+	else
+	{
+	 pr_fon148 = Bounds(x_line148, y_line148, w, h);
+		fon_kadr148 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon148);
+		Image1 -> Canvas -> Draw(x_line148, y_line148, kadr);
+	}
+	if (line149 == true)
+	{
+		pr_fon149 = Bounds(x_line149, y_line149, w, h);
+		fon_kadr149 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon149);
+		Image1 -> Canvas -> Draw(x_line149, y_line149, kadr2);
+	}
+	else
+	{
+	 pr_fon149 = Bounds(x_line149, y_line149, w, h);
+		fon_kadr149 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon149);
+		Image1 -> Canvas -> Draw(x_line149, y_line149, kadr);
+	}
+	if (line150 == true)
+	{
+		pr_fon150 = Bounds(x_line150, y_line150, w, h);
+		fon_kadr150 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon150);
+		Image1 -> Canvas -> Draw(x_line150, y_line150, kadr2);
+	}
+	else
+	{
+	 pr_fon150 = Bounds(x_line150, y_line150, w, h);
+		fon_kadr150 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon150);
+		Image1 -> Canvas -> Draw(x_line150, y_line150, kadr2);
+	}
+	if (line151 == true)
+	{
+		pr_fon151 = Bounds(x_line151, y_line151, w, h);
+		fon_kadr151 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon151);
+		Image1 -> Canvas -> Draw(x_line151, y_line151, kadr2);
+	}
+	else
+	{
+	 pr_fon151 = Bounds(x_line151, y_line151, w, h);
+		fon_kadr151 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon151);
+		Image1 -> Canvas -> Draw(x_line151, y_line151, kadr);
+	}
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::FormKeyDown(TObject *Sender, WORD &Key, TShiftState Shift)
+
+{
+	if(y_line1 >=500 && y_line1 <= 900 && Key == k4)
+		line1 = true;
+	if(y_line2 >=500 && y_line2 <= 900 && Key == k3)
+		line2 = true;
+	if(y_line3 >=500 && y_line3 <= 900 && Key == k4)
+		line3 = true;
+	if(y_line4 >=500 && y_line4 <= 900 && Key == k3)
+		line4 = true;
+	if(y_line5 >=500 && y_line5 <= 900 && Key == k4)
+		line5 = true;
+	if(y_line6 >=500 && y_line6 <= 900 && Key == k1)
+		line6 = true;
+	if(y_line7 >=500 && y_line7 <= 900 && Key == k4)
+		line7 = true;
+	if(y_line8 >=500 && y_line8 <= 900 && Key == k3)
+		line8 = true;
+	if(y_line9 >=500 && y_line9 <= 900 && Key == k2)
+		line9 = true;
+	if(y_line10 >=500 && y_line10 <= 900 && Key == k3)
+		line10 = true;
+	if(y_line11 >=500 && y_line11 <= 900 && Key == k2)
+		line11 = true;
+	if(y_line12 >=500 && y_line12 <= 900 && Key == k4)
+		line12 = true;
+	if(y_line13 >=500 && y_line13 <= 900 && Key == k2)
+		line13 = true;
+	if(y_line14 >=500 && y_line14 <= 900 && Key == k2)
+		line14 = true;
+	if(y_line15 >=500 && y_line15 <= 900 && Key == k1)
+		line15 = true;
+	if(y_line16 >=500 && y_line16 <= 900 && Key == k1)
+		line16 = true;
+}
+//---------------------------------------------------------------------------
+
+
+
+
+void __fastcall TForm1::SpeedButton3Click(TObject *Sender)
+{
+	Timer1->Enabled = false;
+	Form2->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::SpeedButton2Click(TObject *Sender)
+{
+   Timer1->Enabled = false;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::SpeedButton1Click(TObject *Sender)
+{
+	PlaySoundA("D:\\sound.wav",NULL,SND_ASYNC);
+
+	if (key == 1)
+	{
+		 k1 = 81;
+		 k2 = 87;
+		k3 = 69;
+		k4 = 82;
+	}
+	if (key == 2)
+	{
+		 k1 = 49;
+		 k2 = 50;
+		k3 = 51;
+		k4 = 52;
+	}
+	if (key == 3)
+	{
+		 k1 = 65;
+		 k2 = 83;
+		k3 = 68;
+		k4 = 70;
+	}
+	SpeedButton2 -> Visible = true;
+	SpeedButton3 -> Visible = true;
+	SpeedButton4 -> Visible = true;
+   Timer1->Enabled = true;
+	if (theme == 1)
+	{
+		fon -> LoadFromFile("pole2.bmp");
+	}
+	if (theme == 2)
+	{
+		fon -> LoadFromFile("pole1.bmp");
+	}
+	if (theme == 3)
+	{
+		fon -> LoadFromFile("pole3.bmp");
+	}
+	Image1 -> Picture -> Assign(fon);
+	if (theme == 1)
+	{
+		kadr -> LoadFromFile("kletka.bmp");
+		kadr2 -> LoadFromFile("kletka2.bmp");
+	}
+	if (theme == 2)
+	{
+		kadr -> LoadFromFile("kletka.bmp");
+		kadr2 -> LoadFromFile("kletka2.bmp");
+	}
+	if (theme == 3)
+	{
+		kadr -> LoadFromFile("kletka3.bmp");
+		kadr2 -> LoadFromFile("kletka4.bmp");
+	}
+   w = kadr -> Width;
+   h = kadr -> Height;
+   fon_kadr1 -> Width = w;
+   fon_kadr1 -> Height = h;
+   fon_kadr2 -> Width = w;
+   fon_kadr2 -> Height = h;
+   fon_kadr3 -> Width = w;
+   fon_kadr3 -> Height = h;
+   fon_kadr4 -> Width = w;
+   fon_kadr4 -> Height = h;
+   fon_kadr5 -> Width = w;
+   fon_kadr5 -> Height = h;
+   fon_kadr6 -> Width = w;
+   fon_kadr6 -> Height = h;
+   fon_kadr7 -> Width = w;
+   fon_kadr7 -> Height = h;
+   fon_kadr8 -> Width = w;
+   fon_kadr8 -> Height = h;
+   fon_kadr9 -> Width = w;
+   fon_kadr9 -> Height = h;
+   fon_kadr10 -> Width = w;
+   fon_kadr10 -> Height = h;
+   fon_kadr11 -> Width = w;
+   fon_kadr11 -> Height = h;
+   fon_kadr12 -> Width = w;
+   fon_kadr12 -> Height = h;
+   fon_kadr13 -> Width = w;
+   fon_kadr13 -> Height = h;
+   fon_kadr14 -> Width = w;
+   fon_kadr14 -> Height = h;
+   fon_kadr15 -> Width = w;
+   fon_kadr15 -> Height = h;
+   fon_kadr16 -> Width = w;
+   fon_kadr16 -> Height = h;
+   fon_kadr17 -> Width = w;
+   fon_kadr17 -> Height = h;
+   fon_kadr18 -> Width = w;
+   fon_kadr18 -> Height = h;
+   fon_kadr19 -> Width = w;
+   fon_kadr19 -> Height = h;
+   fon_kadr20 -> Width = w;
+   fon_kadr20 -> Height = h;
+   fon_kadr21 -> Width = w;
+   fon_kadr21 -> Height = h;
+   fon_kadr22 -> Width = w;
+   fon_kadr22 -> Height = h;
+   fon_kadr23 -> Width = w;
+   fon_kadr23 -> Height = h;
+   fon_kadr24 -> Width = w;
+   fon_kadr24 -> Height = h;
+   fon_kadr25 -> Width = w;
+   fon_kadr25 -> Height = h;
+   fon_kadr26 -> Width = w;
+   fon_kadr26 -> Height = h;
+   fon_kadr27 -> Width = w;
+   fon_kadr27 -> Height = h;
+   fon_kadr28 -> Width = w;
+   fon_kadr28 -> Height = h;
+   fon_kadr29 -> Width = w;
+   fon_kadr29 -> Height = h;
+   fon_kadr30 -> Width = w;
+   fon_kadr30 -> Height = h;
+   fon_kadr31 -> Width = w;
+   fon_kadr31 -> Height = h;
+   fon_kadr32 -> Width = w;
+   fon_kadr32 -> Height = h;
+   fon_kadr33 -> Width = w;
+   fon_kadr33 -> Height = h;
+   fon_kadr34 -> Width = w;
+   fon_kadr34 -> Height = h;
+   fon_kadr35 -> Width = w;
+   fon_kadr35 -> Height = h;
+   fon_kadr36 -> Width = w;
+   fon_kadr36 -> Height = h;
+   fon_kadr37 -> Width = w;
+   fon_kadr37 -> Height = h;
+   fon_kadr38 -> Width = w;
+   fon_kadr38 -> Height = h;
+   fon_kadr39 -> Width = w;
+   fon_kadr39 -> Height = h;
+   fon_kadr40 -> Width = w;
+   fon_kadr40 -> Height = h;
+   fon_kadr41 -> Width = w;
+   fon_kadr41 -> Height = h;
+   fon_kadr42 -> Width = w;
+   fon_kadr42 -> Height = h;
+   fon_kadr43 -> Width = w;
+   fon_kadr43 -> Height = h;
+   fon_kadr44 -> Width = w;
+   fon_kadr44 -> Height = h;
+   fon_kadr45 -> Width = w;
+   fon_kadr45 -> Height = h;
+   fon_kadr46 -> Width = w;
+   fon_kadr46 -> Height = h;
+   fon_kadr47 -> Width = w;
+   fon_kadr47 -> Height = h;
+   fon_kadr48 -> Width = w;
+   fon_kadr48 -> Height = h;
+   fon_kadr49 -> Width = w;
+   fon_kadr49 -> Height = h;
+   fon_kadr50 -> Width = w;
+   fon_kadr50 -> Height = h;
+   fon_kadr51 -> Width = w;
+   fon_kadr51 -> Height = h;
+   fon_kadr52 -> Width = w;
+   fon_kadr52 -> Height = h;
+   fon_kadr53 -> Width = w;
+   fon_kadr53 -> Height = h;
+   fon_kadr54 -> Width = w;
+   fon_kadr54 -> Height = h;
+   fon_kadr55 -> Width = w;
+   fon_kadr55 -> Height = h;
+   fon_kadr56 -> Width = w;
+   fon_kadr56 -> Height = h;
+   fon_kadr57 -> Width = w;
+   fon_kadr57 -> Height = h;
+   fon_kadr58 -> Width = w;
+   fon_kadr58 -> Height = h;
+   fon_kadr59 -> Width = w;
+   fon_kadr59 -> Height = h;
+   fon_kadr60 -> Width = w;
+   fon_kadr60 -> Height = h;
+   fon_kadr61 -> Width = w;
+   fon_kadr61 -> Height = h;
+   fon_kadr62 -> Width = w;
+   fon_kadr62 -> Height = h;
+   fon_kadr63 -> Width = w;
+   fon_kadr63 -> Height = h;
+   fon_kadr64 -> Width = w;
+   fon_kadr64 -> Height = h;
+   fon_kadr65 -> Width = w;
+   fon_kadr65 -> Height = h;
+   fon_kadr66 -> Width = w;
+   fon_kadr66 -> Height = h;
+   fon_kadr67 -> Width = w;
+   fon_kadr67 -> Height = h;
+   fon_kadr68 -> Width = w;
+   fon_kadr68 -> Height = h;
+   fon_kadr69 -> Width = w;
+   fon_kadr69 -> Height = h;
+   fon_kadr70 -> Width = w;
+   fon_kadr70 -> Height = h;
+   fon_kadr71 -> Width = w;
+   fon_kadr71 -> Height = h;
+   fon_kadr72 -> Width = w;
+   fon_kadr72 -> Height = h;
+   fon_kadr73 -> Width = w;
+   fon_kadr73 -> Height = h;
+   fon_kadr74 -> Width = w;
+   fon_kadr74 -> Height = h;
+   fon_kadr75 -> Width = w;
+   fon_kadr75 -> Height = h;
+   fon_kadr76 -> Width = w;
+   fon_kadr76 -> Height = h;
+   fon_kadr77 -> Width = w;
+   fon_kadr77 -> Height = h;
+   fon_kadr78 -> Width = w;
+   fon_kadr78 -> Height = h;
+   fon_kadr79 -> Width = w;
+   fon_kadr79 -> Height = h;
+   fon_kadr80 -> Width = w;
+   fon_kadr80 -> Height = h;
+   fon_kadr81 -> Width = w;
+   fon_kadr81 -> Height = h;
+   fon_kadr82 -> Width = w;
+   fon_kadr82 -> Height = h;
+   fon_kadr83 -> Width = w;
+   fon_kadr83 -> Height = h;
+   fon_kadr84 -> Width = w;
+   fon_kadr84 -> Height = h;
+   fon_kadr85 -> Width = w;
+   fon_kadr85 -> Height = h;
+   fon_kadr86 -> Width = w;
+   fon_kadr86 -> Height = h;
+   fon_kadr87 -> Width = w;
+   fon_kadr87 -> Height = h;
+   fon_kadr88 -> Width = w;
+   fon_kadr88 -> Height = h;
+   fon_kadr89 -> Width = w;
+   fon_kadr89 -> Height = h;
+   fon_kadr90 -> Width = w;
+   fon_kadr90 -> Height = h;
+   fon_kadr91 -> Width = w;
+   fon_kadr91 -> Height = h;
+   fon_kadr92 -> Width = w;
+   fon_kadr92 -> Height = h;
+   fon_kadr93 -> Width = w;
+   fon_kadr93 -> Height = h;
+   fon_kadr94 -> Width = w;
+   fon_kadr94 -> Height = h;
+   fon_kadr95 -> Width = w;
+   fon_kadr95 -> Height = h;
+   fon_kadr96 -> Width = w;
+   fon_kadr96 -> Height = h;
+   fon_kadr97 -> Width = w;
+   fon_kadr97 -> Height = h;
+   fon_kadr98 -> Width = w;
+   fon_kadr98 -> Height = h;
+   fon_kadr99 -> Width = w;
+   fon_kadr99 -> Height = h;
+   fon_kadr100 -> Width = w;
+   fon_kadr100 -> Height = h;
+   fon_kadr101 -> Width = w;
+   fon_kadr101 -> Height = h;
+   fon_kadr102 -> Width = w;
+   fon_kadr102 -> Height = h;
+   fon_kadr103 -> Width = w;
+   fon_kadr103 -> Height = h;
+   fon_kadr104 -> Width = w;
+   fon_kadr104 -> Height = h;
+   fon_kadr105 -> Width = w;
+   fon_kadr105 -> Height = h;
+   fon_kadr106 -> Width = w;
+   fon_kadr106 -> Height = h;
+   fon_kadr107 -> Width = w;
+   fon_kadr107 -> Height = h;
+   fon_kadr108 -> Width = w;
+   fon_kadr108 -> Height = h;
+   fon_kadr109 -> Width = w;
+   fon_kadr109 -> Height = h;
+   fon_kadr110 -> Width = w;
+   fon_kadr110 -> Height = h;
+   fon_kadr111 -> Width = w;
+   fon_kadr111 -> Height = h;
+   fon_kadr112 -> Width = w;
+   fon_kadr112 -> Height = h;
+   fon_kadr113 -> Width = w;
+   fon_kadr113 -> Height = h;
+   fon_kadr114 -> Width = w;
+   fon_kadr114 -> Height = h;
+   fon_kadr115 -> Width = w;
+   fon_kadr115 -> Height = h;
+   fon_kadr116 -> Width = w;
+   fon_kadr116 -> Height = h;
+   fon_kadr117 -> Width = w;
+   fon_kadr117 -> Height = h;
+   fon_kadr118 -> Width = w;
+   fon_kadr118 -> Height = h;
+   fon_kadr119 -> Width = w;
+   fon_kadr119 -> Height = h;
+   fon_kadr120 -> Width = w;
+   fon_kadr120 -> Height = h;
+   fon_kadr121 -> Width = w;
+   fon_kadr121 -> Height = h;
+   fon_kadr122 -> Width = w;
+   fon_kadr122 -> Height = h;
+   fon_kadr123 -> Width = w;
+   fon_kadr123 -> Height = h;
+   fon_kadr124 -> Width = w;
+   fon_kadr124 -> Height = h;
+   fon_kadr125 -> Width = w;
+   fon_kadr125 -> Height = h;
+   fon_kadr126 -> Width = w;
+   fon_kadr126 -> Height = h;
+   fon_kadr127 -> Width = w;
+   fon_kadr127 -> Height = h;
+   fon_kadr128 -> Width = w;
+   fon_kadr128 -> Height = h;
+   fon_kadr129 -> Width = w;
+   fon_kadr129 -> Height = h;
+   fon_kadr130 -> Width = w;
+   fon_kadr130 -> Height = h;
+   fon_kadr131 -> Width = w;
+   fon_kadr131 -> Height = h;
+   fon_kadr132 -> Width = w;
+   fon_kadr132 -> Height = h;
+   fon_kadr133 -> Width = w;
+   fon_kadr133 -> Height = h;
+   fon_kadr134 -> Width = w;
+   fon_kadr134 -> Height = h;
+   fon_kadr135 -> Width = w;
+   fon_kadr135 -> Height = h;
+   fon_kadr136 -> Width = w;
+   fon_kadr136 -> Height = h;
+   fon_kadr137 -> Width = w;
+   fon_kadr137 -> Height = h;
+   fon_kadr138 -> Width = w;
+   fon_kadr138 -> Height = h;
+   fon_kadr139 -> Width = w;
+   fon_kadr139 -> Height = h;
+   fon_kadr140 -> Width = w;
+   fon_kadr140 -> Height = h;
+   fon_kadr141 -> Width = w;
+   fon_kadr141 -> Height = h;
+   fon_kadr142 -> Width = w;
+   fon_kadr142 -> Height = h;
+   fon_kadr143 -> Width = w;
+   fon_kadr143 -> Height = h;
+   fon_kadr144 -> Width = w;
+   fon_kadr144 -> Height = h;
+   fon_kadr145 -> Width = w;
+   fon_kadr145 -> Height = h;
+   fon_kadr146 -> Width = w;
+   fon_kadr146 -> Height = h;
+   fon_kadr147 -> Width = w;
+   fon_kadr147 -> Height = h;
+   fon_kadr148 -> Width = w;
+   fon_kadr148 -> Height = h;
+   fon_kadr149 -> Width = w;
+   fon_kadr149 -> Height = h;
+   fon_kadr150 -> Width = w;
+   fon_kadr150 -> Height = h;
+   fon_kadr151 -> Width = w;
+   fon_kadr151 -> Height = h;
+
+   pr_kadr = Bounds(0, 0, w, h);
+   pr_fon1 = Bounds(x_line1, y_line1, w, h);
+   pr_fon2 = Bounds(x_line2, y_line2, w, h);
+   pr_fon3 = Bounds(x_line3, y_line3, w, h);
+   pr_fon4 = Bounds(x_line4, y_line4, w, h);
+   pr_fon5 = Bounds(x_line5, y_line5, w, h);
+   pr_fon6 = Bounds(x_line6, y_line6, w, h);
+   pr_fon7 = Bounds(x_line7, y_line7, w, h);
+   pr_fon8 = Bounds(x_line8, y_line8, w, h);
+   pr_fon9 = Bounds(x_line9, y_line9, w, h);
+   pr_fon10 = Bounds(x_line10, y_line10, w, h);
+   pr_fon11 = Bounds(x_line11, y_line11, w, h);
+   pr_fon12 = Bounds(x_line12, y_line12, w, h);
+   pr_fon13 = Bounds(x_line13, y_line13, w, h);
+   pr_fon14 = Bounds(x_line14, y_line14, w, h);
+   pr_fon15 = Bounds(x_line15, y_line15, w, h);
+   pr_fon16 = Bounds(x_line16, y_line16, w, h);
+   pr_fon17 = Bounds(x_line17, y_line7, w, h);
+   pr_fon18 = Bounds(x_line18, y_line8, w, h);
+   pr_fon19 = Bounds(x_line19, y_line9, w, h);
+   pr_fon20 = Bounds(x_line20, y_line20, w, h);
+   pr_fon21 = Bounds(x_line21, y_line21, w, h);
+   pr_fon22 = Bounds(x_line22, y_line22, w, h);
+   pr_fon23 = Bounds(x_line23, y_line23, w, h);
+   pr_fon24 = Bounds(x_line24, y_line24, w, h);
+   pr_fon25 = Bounds(x_line25, y_line25, w, h);
+   pr_fon26 = Bounds(x_line26, y_line26, w, h);
+   pr_fon27 = Bounds(x_line27, y_line27, w, h);
+   pr_fon28 = Bounds(x_line28, y_line28, w, h);
+   pr_fon29 = Bounds(x_line29, y_line29, w, h);
+   pr_fon30 = Bounds(x_line30, y_line30, w, h);
+   pr_fon31 = Bounds(x_line31, y_line31, w, h);
+   pr_fon32 = Bounds(x_line32, y_line32, w, h);
+   pr_fon33 = Bounds(x_line33, y_line33, w, h);
+   pr_fon34 = Bounds(x_line34, y_line34, w, h);
+   pr_fon35 = Bounds(x_line35, y_line35, w, h);
+   pr_fon36 = Bounds(x_line36, y_line36, w, h);
+   pr_fon37 = Bounds(x_line37, y_line37, w, h);
+   pr_fon38 = Bounds(x_line38, y_line38, w, h);
+   pr_fon39 = Bounds(x_line39, y_line39, w, h);
+   pr_fon40 = Bounds(x_line40, y_line40, w, h);
+   pr_fon41 = Bounds(x_line41, y_line41, w, h);
+   pr_fon42 = Bounds(x_line42, y_line42, w, h);
+   pr_fon43 = Bounds(x_line43, y_line43, w, h);
+   pr_fon44 = Bounds(x_line44, y_line44, w, h);
+   pr_fon45 = Bounds(x_line45, y_line45, w, h);
+   pr_fon46 = Bounds(x_line46, y_line46, w, h);
+   pr_fon47 = Bounds(x_line47, y_line47, w, h);
+   pr_fon48 = Bounds(x_line48, y_line48, w, h);
+   pr_fon49 = Bounds(x_line49, y_line49, w, h);
+   pr_fon50 = Bounds(x_line50, y_line50, w, h);
+   pr_fon51 = Bounds(x_line51, y_line51, w, h);
+   pr_fon52 = Bounds(x_line52, y_line52, w, h);
+   pr_fon53 = Bounds(x_line53, y_line53, w, h);
+   pr_fon54 = Bounds(x_line54, y_line54, w, h);
+   pr_fon55 = Bounds(x_line55, y_line55, w, h);
+   pr_fon56 = Bounds(x_line56, y_line56, w, h);
+   pr_fon57 = Bounds(x_line57, y_line57, w, h);
+   pr_fon58 = Bounds(x_line58, y_line58, w, h);
+   pr_fon59 = Bounds(x_line59, y_line59, w, h);
+   pr_fon60 = Bounds(x_line60, y_line60, w, h);
+   pr_fon61 = Bounds(x_line61, y_line61, w, h);
+   pr_fon62 = Bounds(x_line62, y_line62, w, h);
+   pr_fon63 = Bounds(x_line63, y_line63, w, h);
+   pr_fon64 = Bounds(x_line64, y_line64, w, h);
+   pr_fon65 = Bounds(x_line65, y_line65, w, h);
+   pr_fon66 = Bounds(x_line66, y_line66, w, h);
+   pr_fon67 = Bounds(x_line67, y_line67, w, h);
+   pr_fon68 = Bounds(x_line68, y_line68, w, h);
+   pr_fon69 = Bounds(x_line69, y_line69, w, h);
+   pr_fon70 = Bounds(x_line70, y_line70, w, h);
+   pr_fon71 = Bounds(x_line71, y_line71, w, h);
+   pr_fon72 = Bounds(x_line72, y_line72, w, h);
+   pr_fon73 = Bounds(x_line73, y_line73, w, h);
+   pr_fon74 = Bounds(x_line74, y_line74, w, h);
+   pr_fon75 = Bounds(x_line75, y_line75, w, h);
+   pr_fon76 = Bounds(x_line76, y_line76, w, h);
+   pr_fon77 = Bounds(x_line77, y_line77, w, h);
+   pr_fon78 = Bounds(x_line78, y_line78, w, h);
+   pr_fon79 = Bounds(x_line79, y_line79, w, h);
+   pr_fon80 = Bounds(x_line80, y_line80, w, h);
+   pr_fon81 = Bounds(x_line81, y_line81, w, h);
+   pr_fon82 = Bounds(x_line82, y_line82, w, h);
+   pr_fon83 = Bounds(x_line83, y_line83, w, h);
+   pr_fon84 = Bounds(x_line84, y_line84, w, h);
+   pr_fon85 = Bounds(x_line85, y_line85, w, h);
+   pr_fon86 = Bounds(x_line86, y_line86, w, h);
+   pr_fon87 = Bounds(x_line87, y_line87, w, h);
+   pr_fon88 = Bounds(x_line88, y_line88, w, h);
+   pr_fon89 = Bounds(x_line89, y_line89, w, h);
+   pr_fon90 = Bounds(x_line90, y_line90, w, h);
+   pr_fon91 = Bounds(x_line91, y_line91, w, h);
+   pr_fon92 = Bounds(x_line92, y_line92, w, h);
+   pr_fon93 = Bounds(x_line93, y_line93, w, h);
+   pr_fon94 = Bounds(x_line94, y_line94, w, h);
+   pr_fon95 = Bounds(x_line95, y_line95, w, h);
+   pr_fon96 = Bounds(x_line96, y_line96, w, h);
+   pr_fon97 = Bounds(x_line97, y_line97, w, h);
+   pr_fon98 = Bounds(x_line98, y_line98, w, h);
+   pr_fon99 = Bounds(x_line99, y_line99, w, h);
+   pr_fon100 = Bounds(x_line100, y_line100, w, h);
+   pr_fon101 = Bounds(x_line101, y_line101, w, h);
+   pr_fon102 = Bounds(x_line102, y_line102, w, h);
+   pr_fon103 = Bounds(x_line103, y_line103, w, h);
+   pr_fon104 = Bounds(x_line104, y_line104, w, h);
+   pr_fon105 = Bounds(x_line105, y_line105, w, h);
+   pr_fon106 = Bounds(x_line106, y_line106, w, h);
+   pr_fon107 = Bounds(x_line107, y_line108, w, h);
+   pr_fon108 = Bounds(x_line108, y_line108, w, h);
+   pr_fon109 = Bounds(x_line109, y_line109, w, h);
+   pr_fon110 = Bounds(x_line110, y_line110, w, h);
+   pr_fon111 = Bounds(x_line111, y_line111, w, h);
+   pr_fon112 = Bounds(x_line112, y_line112, w, h);
+   pr_fon113 = Bounds(x_line113, y_line113, w, h);
+   pr_fon114 = Bounds(x_line114, y_line114, w, h);
+   pr_fon115 = Bounds(x_line115, y_line115, w, h);
+   pr_fon116 = Bounds(x_line116, y_line116, w, h);
+   pr_fon117 = Bounds(x_line117, y_line117, w, h);
+   pr_fon118 = Bounds(x_line118, y_line118, w, h);
+   pr_fon119 = Bounds(x_line119, y_line119, w, h);
+   pr_fon120 = Bounds(x_line120, y_line120, w, h);
+   pr_fon121 = Bounds(x_line121, y_line121, w, h);
+   pr_fon122 = Bounds(x_line122, y_line122, w, h);
+   pr_fon123 = Bounds(x_line123, y_line123, w, h);
+   pr_fon124 = Bounds(x_line124, y_line124, w, h);
+   pr_fon125 = Bounds(x_line125, y_line125, w, h);
+   pr_fon126 = Bounds(x_line126, y_line126, w, h);
+   pr_fon127 = Bounds(x_line127, y_line127, w, h);
+   pr_fon128 = Bounds(x_line128, y_line128, w, h);
+   pr_fon129 = Bounds(x_line129, y_line129, w, h);
+   pr_fon130 = Bounds(x_line130, y_line130, w, h);
+   pr_fon131 = Bounds(x_line131, y_line131, w, h);
+   pr_fon132 = Bounds(x_line132, y_line132, w, h);
+   pr_fon133 = Bounds(x_line133, y_line133, w, h);
+   pr_fon134 = Bounds(x_line134, y_line134, w, h);
+   pr_fon135 = Bounds(x_line135, y_line135, w, h);
+   pr_fon136 = Bounds(x_line136, y_line136, w, h);
+   pr_fon137 = Bounds(x_line137, y_line137, w, h);
+   pr_fon138 = Bounds(x_line138, y_line138, w, h);
+   pr_fon139 = Bounds(x_line139, y_line139, w, h);
+   pr_fon140 = Bounds(x_line140, y_line140, w, h);
+   pr_fon141 = Bounds(x_line141, y_line141, w, h);
+   pr_fon142 = Bounds(x_line142, y_line142, w, h);
+   pr_fon143 = Bounds(x_line143, y_line143, w, h);
+   pr_fon144 = Bounds(x_line144, y_line144, w, h);
+   pr_fon145 = Bounds(x_line145, y_line145, w, h);
+   pr_fon146 = Bounds(x_line146, y_line146, w, h);
+   pr_fon147 = Bounds(x_line147, y_line147, w, h);
+   pr_fon148 = Bounds(x_line148, y_line148, w, h);
+   pr_fon149 = Bounds(x_line149, y_line149, w, h);
+   pr_fon150 = Bounds(x_line150, y_line150, w, h);
+   pr_fon151 = Bounds(x_line151, y_line151, w, h);
+
+
+   fon_kadr1 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon1);
+   fon_kadr2 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon2);
+   fon_kadr3 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon3);
+   fon_kadr4 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon4);
+   fon_kadr5 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon5);
+   fon_kadr6 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon6);
+   fon_kadr7 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon7);
+   fon_kadr8 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon8);
+   fon_kadr9 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon9);
+   fon_kadr10 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon10);
+   fon_kadr11 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon11);
+   fon_kadr12 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon12);
+   fon_kadr13 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon13);
+   fon_kadr14 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon14);
+   fon_kadr15 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon15);
+   fon_kadr16 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon16);
+   fon_kadr17 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon17);
+   fon_kadr18 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon18);
+   fon_kadr19 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon19);
+   fon_kadr20 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon20);
+   fon_kadr21 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon21);
+   fon_kadr22 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon22);
+   fon_kadr23 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon23);
+   fon_kadr24 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon24);
+   fon_kadr25 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon25);
+   fon_kadr26 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon26);
+   fon_kadr27 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon27);
+   fon_kadr28 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon28);
+   fon_kadr29 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon29);
+   fon_kadr30 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon30);
+   fon_kadr31 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon31);
+   fon_kadr32 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon32);
+   fon_kadr33 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon33);
+   fon_kadr34 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon34);
+   fon_kadr35 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon35);
+   fon_kadr36 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon36);
+   fon_kadr37 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon37);
+   fon_kadr38 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon38);
+   fon_kadr39 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon39);
+   fon_kadr40 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon40);
+   fon_kadr41 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon41);
+   fon_kadr42 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon42);
+   fon_kadr43 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon43);
+   fon_kadr44 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon44);
+   fon_kadr45 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon45);
+   fon_kadr46 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon46);
+   fon_kadr47 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon47);
+   fon_kadr48 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon48);
+   fon_kadr49 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon49);
+   fon_kadr50 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon50);
+   fon_kadr51 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon51);
+   fon_kadr52 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon52);
+   fon_kadr53 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon53);
+   fon_kadr54 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon54);
+   fon_kadr55 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon55);
+   fon_kadr56 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon56);
+   fon_kadr57 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon57);
+   fon_kadr58 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon58);
+   fon_kadr59 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon59);
+   fon_kadr60 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon60);
+   fon_kadr61 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon61);
+   fon_kadr62 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon62);
+   fon_kadr63 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon63);
+   fon_kadr64 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon64);
+   fon_kadr65 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon65);
+   fon_kadr66 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon66);
+   fon_kadr67 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon67);
+   fon_kadr68 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon68);
+   fon_kadr69 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon69);
+   fon_kadr70 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon70);
+   fon_kadr71 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon71);
+   fon_kadr72 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon72);
+   fon_kadr73 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon73);
+   fon_kadr74 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon74);
+   fon_kadr75 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon75);
+   fon_kadr76 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon76);
+   fon_kadr77 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon77);
+   fon_kadr78 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon78);
+   fon_kadr79 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon79);
+   fon_kadr80 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon80);
+   fon_kadr81 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon81);
+   fon_kadr82 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon82);
+   fon_kadr83 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon83);
+   fon_kadr84 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon84);
+   fon_kadr85 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon85);
+   fon_kadr86 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon86);
+   fon_kadr87 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon87);
+   fon_kadr88 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon88);
+   fon_kadr89 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon89);
+   fon_kadr90 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon90);
+   fon_kadr91 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon91);
+   fon_kadr92 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon92);
+   fon_kadr93 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon93);
+   fon_kadr94 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon94);
+   fon_kadr95 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon95);
+   fon_kadr96 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon96);
+   fon_kadr97 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon97);
+   fon_kadr98 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon98);
+   fon_kadr99 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon99);
+   fon_kadr100 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon100);
+   fon_kadr101 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon101);
+   fon_kadr102 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon102);
+   fon_kadr103 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon103);
+   fon_kadr104 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon104);
+   fon_kadr105 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon105);
+   fon_kadr106 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon106);
+   fon_kadr107 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon107);
+   fon_kadr108 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon108);
+   fon_kadr109 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon109);
+   fon_kadr110 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon110);
+   fon_kadr111 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon111);
+   fon_kadr112 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon112);
+   fon_kadr113 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon113);
+   fon_kadr114 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon114);
+   fon_kadr115 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon115);
+   fon_kadr116 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon116);
+   fon_kadr117 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon117);
+   fon_kadr118 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon118);
+   fon_kadr119 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon119);
+   fon_kadr120 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon120);
+   fon_kadr121 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon121);
+   fon_kadr122 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon122);
+   fon_kadr123 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon123);
+   fon_kadr124 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon124);
+   fon_kadr125 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon125);
+   fon_kadr126 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon126);
+   fon_kadr127 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon127);
+   fon_kadr128 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon128);
+   fon_kadr129 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon129);
+   fon_kadr130 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon130);
+   fon_kadr131 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon131);
+   fon_kadr132 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon132);
+   fon_kadr133 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon133);
+   fon_kadr134 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon134);
+   fon_kadr135 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon135);
+   fon_kadr136 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon136);
+   fon_kadr137 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon137);
+   fon_kadr138 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon138);
+   fon_kadr139 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon139);
+   fon_kadr140 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon140);
+   fon_kadr141 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon141);
+   fon_kadr142 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon142);
+   fon_kadr143 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon143);
+   fon_kadr144 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon144);
+   fon_kadr145 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon145);
+   fon_kadr146 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon146);
+   fon_kadr147 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon147);
+   fon_kadr148 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon148);
+   fon_kadr149 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon149);
+   fon_kadr150 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon150);
+   fon_kadr151 -> Canvas -> CopyRect(pr_kadr, fon -> Canvas, pr_fon151);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::SpeedButton4Click(TObject *Sender)
+{
+	Timer1->Enabled = false;
+   y_line4 = -1325,y_line5 = -1475,
+y_line6 = -1625,y_line7 = -1775,
+y_line8 = -1925,y_line9 = -2075,
+y_line10 = -2225,y_line11 = -2375,
+y_line12 = -2525,y_line13 = -2675,
+y_line14 = -2825,y_line15 = -2975,
+y_line16 = -3125,y_line17 = -3275,
+y_line18 = -3425,y_line19 = -3575,
+y_line20 = -3725,y_line21 = -3875,
+y_line22 = -4025,y_line23 = -4175,
+y_line24 = -4325,y_line25 = -4475,
+y_line26 = -4625,y_line27 = -4775,
+y_line28 = -4925,y_line29 = -5075,
+y_line30 = -5225,y_line31 = -5375,//
+y_line32 = -5375,y_line33 = -5525,
+y_line34 = -5675,y_line35 = -5825,
+y_line36 = -5975,y_line37 = -6125,
+y_line38 = -6275,y_line39 = -6425,
+y_line40 = -6575,y_line41 = -6725,
+y_line42 = -6875,y_line43 = -7025,
+y_line44 = -7175,y_line45 = -7325,
+y_line46 = -7475,y_line47 = -7625,
+y_line48 = -7775,y_line49 = -7925,
+y_line50 = -8075,y_line51 = -8225,
+y_line52 = -8375,y_line53 = -8525,
+y_line54 = -8675,y_line55 = -8825,
+y_line56 = -8975,y_line57 = -9125,//
+y_line58 = -9125,y_line59 = -9275,
+y_line60 = -9425,y_line61 = -9575,
+y_line62 = -9725,y_line63 = -9875,
+y_line64 = -10025,y_line65 = -10175,
+y_line66 = -10325,y_line67 = -10475,
+y_line68 = -10625,y_line69 = -10775,
+y_line70 = -10925,y_line71 = -11075,
+y_line72 = -11225,y_line73 = -11375,
+y_line74 = -11525,y_line75 = -11525,//
+y_line76 = -11675,y_line77 = -11825,
+y_line78 = -11975,y_line79 = -12125,
+y_line80 = -12275,y_line81 = -12425,
+y_line82 = -125575,y_line83 = -12725,
+y_line84 = -12875,y_line85 = -13025,
+y_line86 = -13175,y_line87 = -13325,
+y_line88 = -13475,y_line89 = -13625,
+y_line90 = -13775,y_line91 = -13925,//
+y_line92 = -13925,y_line93 = -14075,
+y_line94 = -14225,y_line95 = -14375,
+y_line96 = -14525,y_line97 = -14675,
+y_line98 = -14825,y_line99 = -14975,
+y_line100 = -15125,y_line101 = -15275,
+y_line102 = -15425,y_line103 = -15575,
+y_line104 = -15725,y_line105 = -15875,
+y_line106 = -16025,y_line107 = -16175,
+y_line108 = -16325,y_line109= -16475,
+y_line110 = -16625,y_line111= -16775,
+y_line112 = -16925,y_line113 = -17075,
+y_line114 = -17225,y_line115 = -17375,
+y_line116 = -17525,y_line117 = -17675,
+y_line118 = -17825,y_line119 = -17975,
+y_line120 = -18125,y_line121 = -18275,
+y_line122 = -18425,y_line123 = -18575,
+y_line124 = -18725,y_line125 = -18725,//
+y_line126 = -18875,y_line127 = -19025,
+y_line128 = -19175,y_line129 = -19325,
+y_line130 = -19475,y_line131 = -19625,
+y_line132 = -19775,y_line133 = -19925,
+y_line134 = -20075,y_line135 = -20225,
+y_line136 = -20375,y_line137 = -20525,
+y_line138 = -20675,y_line139 = -20825,
+y_line140 = -20975,y_line141 = -21125,//
+y_line142 = -21125,y_line143 = -21275,
+y_line144 = -21425,y_line145 = -21575,
+y_line146 = -21725,y_line147 = -21875,
+y_line148 = -22025,y_line149 = -22175,
+y_line150 = -22325,y_line151 = -22475,
+
+x_line2=300,x_line3=450,x_line4=300,
+x_line5=450,x_line6=0,x_line7=450,
+x_line8=300,x_line9=0,x_line10=300,
+x_line11=150,x_line12=450,x_line13=150,
+x_line14=150,x_line15=0 ,x_line16=0,
+x_line17=300,x_line18=450,x_line19=300,
+x_line20=450,x_line21=0,x_line22=450,
+x_line23=300,x_line24=150,x_line25=300,
+x_line26=150,x_line27=450,x_line28=150,
+x_line29=150,x_line30=0 ,x_line31=0,
+x_line32=300,x_line33=450,x_line34=300,
+x_line35=450,x_line36=0,x_line37=450,
+x_line38=300,x_line39=150,x_line40=300,
+x_line41=150,x_line42=450,x_line43=150,
+x_line44=150,x_line45=0 ,x_line46=0,
+x_line47=300,x_line48=450,x_line49=300,
+x_line50=450,x_line51=0,x_line52=450,
+x_line53=300,x_line54=150,x_line55=300,
+x_line56=150,x_line57=450,x_line58=150,
+x_line59=150,x_line60=0 ,x_line61=0,
+x_line62=300,x_line63=450,x_line64=300,
+x_line65=450,x_line66=0,x_line67=450,
+x_line68=300,x_line69=150,x_line70=300,
+x_line71=150,x_line72=450,x_line73=150,
+x_line74=150,x_line75=0 ,x_line76=0,
+x_line77=300,x_line78=450,x_line79=300,
+x_line80=450,x_line81=0,x_line82=450,
+x_line83=300,x_line84=150,x_line85=300,
+x_line86=150,x_line87=450,x_line88=150,
+x_line89=150,x_line90=0 ,x_line91=0,
+x_line92=300,x_line93=450,x_line94=300,
+x_line95=450,x_line96=0,x_line97=450,
+x_line98=300,x_line99=150,x_line100=300,
+x_line101=150,x_line102=450,x_line103=150,
+x_line104=150,x_line105=0 ,x_line106=0,
+x_line107=300,x_line108=450,x_line109=300,
+x_line110=450,x_line111=0,x_line112=450,
+x_line113=300,x_line114=150,x_line115=300,
+x_line116=150,x_line117=450,x_line118=150,
+x_line119=150,x_line120=0 ,x_line121=0,
+x_line122=300,x_line123=450,x_line124=300,
+x_line125=450,x_line126=0,x_line127=450,
+x_line128=300,x_line129=150,x_line130=300,
+x_line131=150,x_line132=450,x_line133=150,
+x_line134=150,x_line135=0 ,x_line136=0,
+x_line137=300,x_line138=450,x_line139=300,
+x_line140=450,x_line141=0,x_line142=450,
+x_line143=300,x_line144=150,x_line145=300,
+x_line146=150,x_line147=450,x_line148=150,
+x_line149=150,x_line150=0 ,x_line151=0;
+
+}
+//---------------------------------------------------------------------------
+
